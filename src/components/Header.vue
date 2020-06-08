@@ -30,7 +30,10 @@ export default {
 		background-image: url("../assets/svg/twitter.svg");
 		background-size: cover;
 		background-position: center;
-		padding: 10px;
+		//padding: 10px;
+		width: 20px;
+		margin: 2px 0px;
+		height: 20px;
 		position: absolute;
 	}
 
