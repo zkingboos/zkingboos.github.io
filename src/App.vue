@@ -8,9 +8,10 @@
 			/>
 			<!---<RepoEntity v-bind:repos="repos" />--->
 		</div>
-		<!---<div class="waves">
+		<Temporary />
+		<div class="waves">
 			<img src="./assets/svg/waves.svg" />
-		</div>--->
+		</div>
 	</div>
 </template>
 
@@ -18,6 +19,7 @@
 import Header from "./components/Header.vue";
 import UserEntity from "./components/UserEntity.vue";
 //import RepoEntity from "./components/RepoEntity.vue";
+import Temporary from "./components/Temporary.vue";
 import { retrieveUserRepos } from "./actions/github";
 
 export default {
@@ -27,7 +29,7 @@ export default {
 	},
 	name: "App",
 	components: {
-		Header, UserEntity, //RepoEntity
+		Header, UserEntity, Temporary //RepoEntity
 	},
 	data() {
 		return {
@@ -60,8 +62,8 @@ body {
 .waves {
 	img {
 		width: 100%;
-		margin: 0px;
-		padding: 0px;
+		bottom: 0px;
+		position: fixed;
 	}
 }
 </style>
