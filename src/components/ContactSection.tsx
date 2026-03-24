@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="py-24 px-6">
       <div className="max-w-4xl mx-auto text-center">
@@ -11,11 +14,11 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-2">
-            <span className="text-muted-foreground">//</span> Contact
+            <span className="text-muted-foreground">//</span> {t("contact.label")}
           </h2>
-          <p className="text-3xl font-display font-bold mb-6">Let's connect</p>
+          <p className="text-3xl font-display font-bold mb-6">{t("contact.title")}</p>
           <p className="text-secondary-foreground/70 mb-10 max-w-lg mx-auto">
-            Interested in working together or just want to say hello? Feel free to reach out.
+            {t("contact.desc")}
           </p>
 
           <div className="flex items-center justify-center gap-6 flex-wrap">
@@ -46,7 +49,7 @@ const ContactSection = () => {
 
         <div className="mt-24 pt-8 border-t border-border">
           <p className="font-mono text-xs text-muted-foreground">
-            © {new Date().getFullYear()} José Gabriel — Built with passion
+            © {new Date().getFullYear()} José Gabriel — {t("contact.footer")}
           </p>
         </div>
       </div>
