@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { heroContent, personalInfo } from "@/config/site";
 
 const HeroSection = () => {
-  const { t } = useLanguage();
+  const { l } = useLanguage();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
@@ -18,19 +19,16 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <p className="font-mono text-primary text-sm mb-6 tracking-widest uppercase">
-            <span className="text-muted-foreground">$</span> {t("hero.whoami")}
+            <span className="text-muted-foreground">$</span> whoami
           </p>
-
           <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            José Gabriel
+            {personalInfo.name}
           </h1>
-
           <p className="text-xl md:text-2xl text-muted-foreground font-light mb-4">
-            {t("hero.role")}
+            {l(heroContent.role)}
           </p>
-
           <p className="max-w-2xl mx-auto text-secondary-foreground/70 leading-relaxed mb-10 text-base md:text-lg">
-            {t("hero.description")}
+            {l(heroContent.description)}
           </p>
         </motion.div>
 
@@ -40,47 +38,27 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-wrap items-center justify-center gap-4"
         >
-          <a
-            href="https://github.com/zkingboos"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-mono text-sm font-medium hover:opacity-90 transition-opacity"
-          >
-            <GithubIcon className="w-4 h-4" />
-            {t("hero.github")}
+          <a href={personalInfo.github} target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-mono text-sm font-medium hover:opacity-90 transition-opacity">
+            <GithubIcon className="w-4 h-4" />GitHub
           </a>
-          <a
-            href="https://linkedin.com/in/zkingboos"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-primary/40 text-foreground font-mono text-sm font-medium hover:glow-border hover:bg-primary/10 transition-colors"
-          >
-            <LinkedInIcon className="w-4 h-4" />
-            {t("hero.linkedin")}
+          <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-primary/40 text-foreground font-mono text-sm font-medium hover:glow-border hover:bg-primary/10 transition-colors">
+            <LinkedInIcon className="w-4 h-4" />LinkedIn
           </a>
-          {/* TODO: Replace "#" with the actual CV PDF link */}
-          <a
-            href="#"
-            download
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-primary/40 text-foreground font-mono text-sm font-medium hover:glow-border hover:bg-primary/10 transition-colors"
-          >
+          {/* TODO: Replace "#" with the actual CV PDF link in src/config/site.ts */}
+          <a href={personalInfo.cvLink} download
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-primary/40 text-foreground font-mono text-sm font-medium hover:glow-border hover:bg-primary/10 transition-colors">
             <DownloadIcon className="w-4 h-4" />
-            {t("hero.downloadCv")}
+            {l({ en: "Download CV", pt: "Baixar CV" })}
           </a>
-          <a
-            href="mailto:josegmelo.dev@gmail.com"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-border text-foreground font-mono text-sm font-medium hover:glow-border hover:border-primary/40 transition-colors"
-          >
-            {t("hero.contact")}
+          <a href={`mailto:${personalInfo.email}`}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-border text-foreground font-mono text-sm font-medium hover:glow-border hover:border-primary/40 transition-colors">
+            {l({ en: "Contact", pt: "Contato" })}
           </a>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 1 }}
-          className="mt-20"
-        >
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2, duration: 1 }} className="mt-20">
           <div className="w-px h-16 line-glow mx-auto" />
         </motion.div>
       </div>
