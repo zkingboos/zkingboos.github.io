@@ -47,6 +47,15 @@ const HeroSection = () => {
             <GithubIcon className="w-4 h-4" />
             GitHub
           </a>
+          <a
+            href="https://linkedin.com/in/zkingboos"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-primary/40 text-foreground font-mono text-sm font-medium hover:glow-border hover:bg-primary/10 transition-colors"
+          >
+            <LinkedInIcon className="w-4 h-4" />
+            LinkedIn
+          </a>
           {/* TODO: Replace "#" with the actual CV PDF link */}
           <a
             href="#"
