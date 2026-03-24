@@ -33,6 +33,14 @@ const ContactSection = () => {
             >
               github.com/zkingboos
             </a>
+            <a
+              href="https://linkedin.com/in/zkingboos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-border text-foreground font-mono text-sm font-medium hover:border-primary/40 transition-colors"
+            >
+              linkedin.com/in/zkingboos
+            </a>
           </div>
         </motion.div>
 
