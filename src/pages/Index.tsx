@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import ExperienceSection from "@/components/ExperienceSection";
+import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import ContactSection from "@/components/ContactSection";
 
@@ -11,6 +12,7 @@ const Index = () => {
           <span className="font-mono text-sm text-primary font-semibold">jg<span className="animate-blink">_</span></span>
           <div className="flex gap-6">
             <a href="#experience" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">experience</a>
+            <a href="#projects" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">projects</a>
             <a href="#skills" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">skills</a>
             <a href="#contact" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">contact</a>
           </div>
@@ -19,6 +21,7 @@ const Index = () => {
 
       <HeroSection />
       <ExperienceSection />
+      <ProjectsSection />
       <SkillsSection />
       <ContactSection />
     </div>
