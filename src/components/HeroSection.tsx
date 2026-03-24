@@ -36,7 +36,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex items-center justify-center gap-6"
+          className="flex flex-wrap items-center justify-center gap-4"
         >
           <a
             href="https://github.com/zkingboos"
@@ -46,6 +46,15 @@ const HeroSection = () => {
           >
             <GithubIcon className="w-4 h-4" />
             GitHub
+          </a>
+          {/* TODO: Replace "#" with the actual CV PDF link */}
+          <a
+            href="#"
+            download
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-primary/40 text-foreground font-mono text-sm font-medium hover:glow-border hover:bg-primary/10 transition-colors"
+          >
+            <DownloadIcon className="w-4 h-4" />
+            Download CV
           </a>
           <a
             href="mailto:josegmelo.dev@gmail.com"
