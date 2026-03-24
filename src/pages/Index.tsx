@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
@@ -11,6 +12,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <span className="font-mono text-sm text-primary font-semibold">jg<span className="animate-blink">_</span></span>
           <div className="flex gap-6">
+            <a href="#about" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">about</a>
             <a href="#experience" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">experience</a>
             <a href="#projects" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">projects</a>
             <a href="#skills" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">skills</a>
@@ -20,6 +22,7 @@ const Index = () => {
       </nav>
 
       <HeroSection />
+      <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
       <SkillsSection />
