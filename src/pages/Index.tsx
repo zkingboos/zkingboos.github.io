@@ -4,10 +4,12 @@ import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import ContactSection from "@/components/ContactSection";
+import NebulaBg from "@/components/NebulaBg";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <NebulaBg />
       <nav className="fixed top-0 left-0 right-0 z-50 glass-strong border-b border-border">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <span className="font-mono text-sm text-primary font-semibold">jg<span className="animate-blink">_</span></span>
