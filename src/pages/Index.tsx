@@ -1,16 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import SkillsSection from "@/components/SkillsSection";
+import ContactSection from "@/components/ContactSection";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+          <span className="font-mono text-sm text-primary font-semibold">jg<span className="animate-blink">_</span></span>
+          <div className="flex gap-6">
+            <a href="#experience" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">experience</a>
+            <a href="#skills" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">skills</a>
+            <a href="#contact" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">contact</a>
+          </div>
+        </div>
+      </nav>
+
+      <HeroSection />
+      <ExperienceSection />
+      <SkillsSection />
+      <ContactSection />
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
