@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
-      {/* Grid background */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
         backgroundSize: '60px 60px'
@@ -16,7 +18,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <p className="font-mono text-primary text-sm mb-6 tracking-widest uppercase">
-            <span className="text-muted-foreground">$</span> whoami
+            <span className="text-muted-foreground">$</span> {t("hero.whoami")}
           </p>
 
           <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -24,11 +26,11 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground font-light mb-4">
-            Software Engineer
+            {t("hero.role")}
           </p>
 
           <p className="max-w-2xl mx-auto text-secondary-foreground/70 leading-relaxed mb-10 text-base md:text-lg">
-            Expert in distributed, secure, and highly scalable systems. Focused on microservices, DevOps, and leveraging cutting-edge technologies to build sustainable solutions.
+            {t("hero.description")}
           </p>
         </motion.div>
 
@@ -45,7 +47,7 @@ const HeroSection = () => {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-mono text-sm font-medium hover:opacity-90 transition-opacity"
           >
             <GithubIcon className="w-4 h-4" />
-            GitHub
+            {t("hero.github")}
           </a>
           <a
             href="https://linkedin.com/in/zkingboos"
@@ -54,7 +56,7 @@ const HeroSection = () => {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-primary/40 text-foreground font-mono text-sm font-medium hover:glow-border hover:bg-primary/10 transition-colors"
           >
             <LinkedInIcon className="w-4 h-4" />
-            LinkedIn
+            {t("hero.linkedin")}
           </a>
           {/* TODO: Replace "#" with the actual CV PDF link */}
           <a
@@ -63,13 +65,13 @@ const HeroSection = () => {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-primary/40 text-foreground font-mono text-sm font-medium hover:glow-border hover:bg-primary/10 transition-colors"
           >
             <DownloadIcon className="w-4 h-4" />
-            Download CV
+            {t("hero.downloadCv")}
           </a>
           <a
             href="mailto:josegmelo.dev@gmail.com"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-border text-foreground font-mono text-sm font-medium hover:glow-border hover:border-primary/40 transition-colors"
           >
-            Contact
+            {t("hero.contact")}
           </a>
         </motion.div>
 
