@@ -126,7 +126,7 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: (i % 4) * 0.1 }}
-              className="group p-6 rounded-lg border border-border bg-card hover:border-primary/30 transition-colors"
+              className="group p-6 rounded-lg glass hover:border-primary/30 transition-all hover:glow-primary"
             >
               <div className="flex items-start justify-between mb-3">
                 <div>

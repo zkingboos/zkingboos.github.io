@@ -43,7 +43,7 @@ const SkillsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="p-6 rounded-lg border border-border bg-card"
+              className="p-6 rounded-lg glass"
             >
               <h3 className="font-mono text-sm text-primary mb-4">{`> ${group.title}`}</h3>
               <div className="flex flex-wrap gap-2">
