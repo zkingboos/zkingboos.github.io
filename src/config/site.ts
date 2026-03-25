@@ -22,6 +22,8 @@ export const personalInfo = {
   linkedin: "https://linkedin.com/in/zkingboos",
   // TODO: Replace with the actual CV PDF link
   cvLink: "#",
+  // TODO: Replace with your actual profile photo path (e.g., "/profile.jpg" or an imported image)
+  profilePhoto: "",
 };
 
 // ================================================
