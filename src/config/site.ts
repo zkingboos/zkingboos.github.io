@@ -381,10 +381,10 @@ export const openSourceContent = {
 			name: "Portainer Action",
 			repo: "https://github.com/zkingboos/portainer-action",
 			description: t(
-				"A powerful GitHub Action for managing Portainer environments.",
-				"Uma poderosa ação do GitHub para gerenciar ambientes do Portainer.",
+				"A powerful GitHub Action designed to manage Portainer environments, allowing for seamless automation of stack deployments and updates directly through CI/CD workflows.",
+				"Uma poderosa GitHub Action projetada para gerenciar ambientes Portainer, permitindo a automação contínua de implantações e atualizações de stacks diretamente através de fluxos de CI/CD.",
 			),
-			language: "Javascript",
+			language: "JavaScript",
 			stars: 0,
 		},
 		{
