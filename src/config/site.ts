@@ -19,8 +19,8 @@ export const personalInfo = {
 export const heroContent = {
 	role: t("Software Engineer", "Engenheiro de Software"),
 	description: t(
-		"Expert in distributed, secure, and highly scalable systems. Focused on microservices, DevOps, and leveraging cutting-edge technologies to build sustainable solutions.",
-		"Especialista em sistemas distribuídos, seguros e altamente escaláveis. Focado em microsserviços, DevOps e tecnologias de ponta para construir soluções sustentáveis.",
+		"Expert in distributed, secure, and scalable systems. Focused on microservices, DevOps, and leveraging modern technologies to build sustainable solutions.",
+		"Especialista em sistemas distribuídos, seguros e escaláveis. Focado em microsserviços, DevOps e tecnologias modernas para construir soluções sustentáveis.",
 	),
 };
 
@@ -29,12 +29,12 @@ export const aboutContent = {
 	title: t("Who I am", "Quem eu sou"),
 	paragraphs: [
 		t(
-			"Hi, my name is {name}, I'm 21 years old, and a programming enthusiast. I'm very curious and intensely focused on understanding how things work under the hood. I started my journey programming with a sub-language called {skript} (mainly due to Minecraft) and soon moved to {java}. Four years later, I transitioned to {kotlin} and several others. Currently, I'm studying {golang} and discovering new passions, believing in a language-agnostic approach where the right tool is used for the right job.",
-			"Olá, meu nome é {name}, tenho 21 anos e sou um entusiasta de programação. Sou muito curioso e intensamente focado em entender como as coisas funcionam por baixo dos panos. Comecei minha jornada programando com uma sub-linguagem chamada {skript} (principalmente por causa do Minecraft) e logo migrei para {java}. Quatro anos depois, fiz a transição para {kotlin} e várias outras. Atualmente, estou estudando {golang} e descobrindo novas paixões, acreditando em uma abordagem agnóstica de linguagem onde a ferramenta certa é usada para o trabalho certo.",
+			"Hi, my name is {name}. I am a Software Engineer driven by a deep curiosity for how systems operate under the hood. My technical foundation started with {java} and {kotlin}, and I am currently expanding my ecosystem with {golang}, keeping a language-agnostic perspective to select the most appropriate tool for each task.",
+			"Olá, meu nome é {name}. Sou um Engenheiro de Software movido por uma profunda curiosidade sobre como os sistemas operam por baixo dos panos. Minha base técnica começou com {java} e {kotlin}, e atualmente estou expandindo meu ecossistema com {golang}, mantendo uma perspectiva agnóstica de linguagem para selecionar a ferramenta mais apropriada para cada tarefa.",
 		),
 		t(
-			"Over recent years, my interests have expanded into {microservices}, {security}, {devops}, {compilers}, and {interpreters}. This curiosity quickly translated into my professional career. Today, I specialize in architecting highly scalable, secure, and distributed systems. I do well in settings where security and performance are crucial.",
-			"Nos últimos anos, meus interesses se expandiram para {microservices}, {security}, {devops}, {compilers} e {interpreters}. Essa curiosidade rapidamente se traduziu na minha carreira profissional. Hoje, me especializo em arquitetar sistemas altamente escaláveis, seguros e distribuídos. Me saio bem em ambientes onde segurança e performance são cruciais.",
+			"Over time, my knowledge has grown to include {microservices}, system {security}, {devops}, {compilers}, and {interpreters}. I now specialize in designing distributed, secure, and scalable systems, thriving in environments where consistency and performance are crucial. I perform well in backend engineering and infrastructure, building solid systems that can handle massive scale.",
+			"Com o tempo, meu conhecimento cresceu para incluir {microservices}, {security} de sistemas, {devops}, {compilers} e {interpreters}. Agora me especializo em projetar sistemas distribuídos, seguros e escaláveis, prosperando em ambientes onde consistência e performance são cruciais. Me saio bem na engenharia de backend e infraestrutura, construindo sistemas sólidos que podem lidar com escala massiva.",
 		),
 	],
 };
@@ -48,8 +48,8 @@ export const experienceContent = {
 			role: t("Software Engineer", "Engenheiro de Software"),
 			company: "Hivemedia / Aventrada",
 			description: t(
-				"Development of a high-concurrency concert ticketing platform focused on secure issuance, real-time payment control, and robust anti-fraud mechanisms. Implemented database transactional locks to prevent overbooking during massive traffic spikes.",
-				"Desenvolvimento de uma plataforma de tickets para shows de alta concorrência, focada em emissão segura, controle de pagamento em tempo real e mecanismos robustos anti-fraude. Implementação de locks transacionais no banco para prevenir overbooking durante picos de tráfego.",
+				"Developed a ticketing platform focused on secure issuance, real-time payment control, and fraud prevention.",
+				"Desenvolvi uma plataforma de tickets focada em emissão segura, controle de pagamento em tempo real e prevenção de fraudes.",
 			),
 			stack: [
 				"Hono",
@@ -66,8 +66,8 @@ export const experienceContent = {
 			role: t("Software Engineer", "Engenheiro de Software"),
 			company: "Hivemedia / Affiliate",
 			description: t(
-				"Built a video monitoring platform for YouTube, Instagram, X, and TikTok, processing over 30,000 videos daily. Content authenticity verified through a dedicated Machine Learning microservice.",
-				"Construção de uma plataforma de monitoramento de vídeos para YouTube, Instagram, X e TikTok, processando mais de 30.000 vídeos diariamente. Autenticidade de conteúdo verificada através de um microsserviço dedicado de Machine Learning.",
+				"Built a video monitoring platform for YouTube, Instagram, X, and TikTok, successfully processing over 30,000 daily videos. Leveraged a dedicated Machine Learning microservice to verify content authenticity.",
+				"Construí uma plataforma de monitoramento de vídeos para YouTube, Instagram, X e TikTok, processando com sucesso mais de 30.000 vídeos diariamente. Utilizei um microsserviço dedicado de Machine Learning para verificar a autenticidade do conteúdo.",
 			),
 			stack: [
 				"Sentry",
@@ -84,8 +84,8 @@ export const experienceContent = {
 			role: t("IT Engineer", "Engenheiro de TI"),
 			company: "Hivemedia",
 			description: t(
-				"Migrated from AWS to bare-metal, significantly reducing cloud costs. Utilized Proxmox cluster and Ceph distributed storage to eliminate single points of failure. Entire infrastructure running behind a VPN for secure access.",
-				"Migração da AWS para bare-metal, reduzindo significativamente os custos de nuvem. Utilização de cluster Proxmox e armazenamento distribuído Ceph para eliminar pontos únicos de falha. Toda a infraestrutura rodando atrás de uma VPN para acesso seguro.",
+				"Executed the infrastructure migration from AWS to a bare-metal environment, significantly reducing cloud costs. Utilized a Proxmox cluster and Ceph distributed storage systems to eliminate single points of failure, with the entire infrastructure isolated behind a VPN for secure remote access.",
+				"Executei a migração de infraestrutura da AWS para um ambiente bare-metal, reduzindo significativamente os custos de nuvem. Utilizei um cluster Proxmox e sistemas de armazenamento distribuído Ceph para eliminar pontos únicos de falha, com toda a infraestrutura isolada atrás de uma VPN para acesso remoto seguro.",
 			),
 			stack: [
 				"Proxmox",
@@ -105,25 +105,12 @@ export const projectsContent = {
 	items: [
 		{
 			title: "Aventrada",
-			subtitle: t(
-				"High-Concurrency Ticketing Platform",
-				"Plataforma de Tickets de Alta Concorrência",
-			),
+			subtitle: t("Ticketing Platform", "Plataforma de Tickets"),
 			role: t("Software Engineer", "Engenheiro de Software"),
 			description: t(
-				"Development of a high-concurrency concert ticketing platform focused on secure issuance, real-time payment control, and robust anti-fraud mechanisms.",
-				"Desenvolvimento de uma plataforma de tickets para shows de alta concorrência, focada em emissão segura, controle de pagamento em tempo real e mecanismos robustos anti-fraude.",
+				"A ticketing platform focused on secure issuance, real-time payment control, and robust anti-fraud mechanisms. Implemented rigorous database transactional locks in PostgreSQL to prevent overbooking during massive sales traffic spikes, and integrated real-time state control and financial validation flows via Stripe.",
+				"Plataforma de tickets focada em emissão segura, controle de pagamentos em tempo real e mecanismos robustos antifraude. Implementei locks transacionais rigorosos no PostgreSQL para evitar overbooking durante picos massivos de vendas e integrei controle de estado em tempo real e fluxos de validação financeira via Stripe.",
 			),
-			achievements: [
-				t(
-					"Implemented rigorous database transactional locks in PostgreSQL to prevent overbooking during massive sales traffic spikes.",
-					"Implementação de locks transacionais rigorosos no PostgreSQL para prevenir overbooking durante picos massivos de vendas.",
-				),
-				t(
-					"Integrated real-time state control and financial validation flows via Stripe.",
-					"Integração de controle de estado em tempo real e fluxos de validação financeira via Stripe.",
-				),
-			],
 			stack: [
 				"Hono",
 				"Bun",
@@ -142,19 +129,9 @@ export const projectsContent = {
 			),
 			role: t("Software Engineer", "Engenheiro de Software"),
 			description: t(
-				"Implementation of a highly scalable video monitoring software for YouTube, Instagram, X, and TikTok, successfully processing over 30,000 videos daily.",
-				"Implementação de um software de monitoramento de vídeos altamente escalável para YouTube, Instagram, X e TikTok, processando com sucesso mais de 30.000 vídeos diariamente.",
+				"Scalable video monitoring software for YouTube, Instagram, X, and TikTok, successfully processing over 30,000 videos daily. Integrated a dedicated Machine Learning microservice to verify the authenticity of user-generated content, handling message queuing and distributed processing to maintain reliable performance.",
+				"Software escalável de monitoramento de vídeos para YouTube, Instagram, X e TikTok, processando mais de 30.000 vídeos diariamente. Integrei um microsserviço dedicado de Machine Learning para verificar a autenticidade do conteúdo gerado pelos usuários, gerenciando filas de mensagens e processamento distribuído para manter a confiabilidade e performance.",
 			),
-			achievements: [
-				t(
-					"Integrated a dedicated Machine Learning microservice to verify the authenticity of user-generated content.",
-					"Integração de um microsserviço dedicado de Machine Learning para verificar a autenticidade de conteúdo gerado por usuários.",
-				),
-				t(
-					"Handled message queuing and distributed processing to maintain reliable performance at scale.",
-					"Gerenciamento de filas de mensagens e processamento distribuído para manter performance confiável em escala.",
-				),
-			],
 			stack: [
 				"Sentry",
 				"Bun",
@@ -170,23 +147,13 @@ export const projectsContent = {
 			title: "Launchpaid",
 			subtitle: t(
 				"Creator & Affiliate Marketing Platform",
-				"Plataforma de Marketing de Criadores & Afiliados",
+				"Plataforma de Marketing para Criadores & Afiliados",
 			),
 			role: t("Software Engineer", "Engenheiro de Software"),
 			description: t(
-				"A multi-service platform focused on creator marketing and automated payment processing, specifically tailored for TikTok Shop campaigns.",
-				"Uma plataforma multi-serviço focada em marketing de criadores e processamento automatizado de pagamentos, especificamente para campanhas do TikTok Shop.",
+				"A multi-service platform focused on creator marketing and automated payment processing, specifically tailored for TikTok Shop campaigns. Engineered campaign management systems tracking metrics like GMV, views, and likes to automatically calculate complex creator payouts, and integrated Stripe for comprehensive payment routing.",
+				"Plataforma multi-serviços focada em marketing de influenciadores e processamento automatizado de pagamentos, feita especificamente para campanhas do TikTok Shop. Desenvolvi sistemas de gestão de campanhas que rastreiam métricas como GMV, visualizações e curtidas para calcular automaticamente os repasses aos criadores de conteúdo, integrando o Stripe para o roteamento completo dos pagamentos.",
 			),
-			achievements: [
-				t(
-					"Engineered campaign management systems tracking metrics like GMV, views, and likes to automatically calculate complex creator payouts.",
-					"Engenharia de sistemas de gerenciamento de campanhas rastreando métricas como GMV, visualizações e curtidas para calcular automaticamente pagamentos complexos de criadores.",
-				),
-				t(
-					"Integrated Stripe for comprehensive payment routing and credit management.",
-					"Integração do Stripe para roteamento abrangente de pagamentos e gerenciamento de créditos.",
-				),
-			],
 			stack: [
 				"Bun",
 				"Hono",
@@ -200,26 +167,16 @@ export const projectsContent = {
 			],
 		},
 		{
-			title: "1auth",
+			title: "1Auth",
 			subtitle: t(
 				"Secure Account Management Platform",
 				"Plataforma de Gerenciamento Seguro de Contas",
 			),
 			role: t("Software Engineer", "Engenheiro de Software"),
 			description: t(
-				"A highly secure platform enabling agencies to manage and register high-profile/celebrity accounts utilizing end-to-end encryption between devices.",
-				"Uma plataforma altamente segura que permite agências gerenciarem e registrarem contas de alto perfil/celebridades utilizando criptografia de ponta a ponta entre dispositivos.",
+				"A secure platform enabling agencies to manage and register high-profile accounts utilizing end-to-end encryption between devices. Designed and implemented granular RBAC to strictly isolate team permissions.",
+				"Plataforma segura que permite às agências gerenciar e registrar contas de influenciadores e celebridades utilizando criptografia de ponta a ponta entre os dispositivos. Projetei e implementei controle de acesso (RBAC) granular para isolar rigorosamente as permissões de cada equipe.",
 			),
-			achievements: [
-				t(
-					"Designed and implemented granular Role-Based Access Control (RBAC) to strictly isolate team permissions.",
-					"Design e implementação de Controle de Acesso Baseado em Papéis (RBAC) granular para isolar estritamente permissões de equipes.",
-				),
-				t(
-					"Architected the backend for high availability and load balancing.",
-					"Arquitetura do backend para alta disponibilidade e balanceamento de carga.",
-				),
-			],
 			stack: [
 				"Kotlin",
 				"Ktor",
@@ -234,23 +191,13 @@ export const projectsContent = {
 			title: "Helix",
 			subtitle: t(
 				"Discord Bot Configuration Dashboard",
-				"Dashboard de Configuração de Bots Discord",
+				"Dashboard de Configuração de Bots para Discord",
 			),
 			role: t("Software Engineer", "Engenheiro de Software"),
 			description: t(
-				"A configuration dashboard and provisioning system for Discord bots, featuring real-time updates and subscription management.",
-				"Um dashboard de configuração e sistema de provisionamento para bots Discord, com atualizações em tempo real e gerenciamento de assinaturas.",
+				"A configuration dashboard and provisioning system for Discord bots, featuring real-time updates and subscription management. Developed an automated provisioning system utilizing the Docker API, and integrated Stripe for recurring subscriptions.",
+				"Dashboard de configuração e sistema de provisionamento para bots do Discord, com atualizações em tempo real e gestão de assinaturas. Desenvolvi um sistema de provisionamento automatizado utilizando a API do Docker e integrei o Stripe para gerenciar assinaturas recorrentes.",
 			),
-			achievements: [
-				t(
-					"Developed an automated provisioning system utilizing the Docker API.",
-					"Desenvolvimento de um sistema de provisionamento automatizado utilizando a API do Docker.",
-				),
-				t(
-					"Ensured high availability through horizontal scaling via Docker Swarm and integrated Stripe for recurring subscriptions.",
-					"Alta disponibilidade através de escalabilidade horizontal via Docker Swarm e integração do Stripe para assinaturas recorrentes.",
-				),
-			],
 			stack: [
 				"Kotlin",
 				"Ktor",
@@ -271,19 +218,9 @@ export const projectsContent = {
 			),
 			role: t("Software Engineer", "Engenheiro de Software"),
 			description: t(
-				"A secure Real-Money Trading (RMT) marketplace platform facilitating the exchange of Roblox in-game items for fiat and digital currencies.",
-				"Uma plataforma segura de marketplace de Real-Money Trading (RMT) facilitando a troca de itens in-game do Roblox por moedas fiduciárias e digitais.",
+				"A secure Real-Money Trading (RMT) marketplace platform facilitating the exchange of Roblox in-game items for fiat and digital currencies. Architected a microservices-oriented backend to safely process virtual asset transactions, engineering the crypto payment solution from scratch with wallet encryption and blockchain double-spending prevention.",
+				"Marketplace seguro de Real-Money Trading (RMT) que facilita a troca de itens virtuais do Roblox por dinheiro real e criptomoedas. Estruturei um backend orientado a microsserviços para processar transações de ativos virtuais com segurança e construí do zero a solução de pagamento em crypto, implementando criptografia de carteiras e prevenção contra gasto duplo (double-spending) na blockchain.",
 			),
-			achievements: [
-				t(
-					"Architected a microservices-oriented backend to safely process virtual asset transactions.",
-					"Arquitetura de um backend orientado a microsserviços para processar transações de ativos virtuais com segurança.",
-				),
-				t(
-					"Engineered the crypto payment solution from scratch with wallet encryption and blockchain double-spending prevention.",
-					"Engenharia da solução de pagamento crypto do zero com criptografia de carteira e prevenção de double-spending em blockchain.",
-				),
-			],
 			stack: [
 				"Node.js",
 				"TypeScript",
@@ -296,25 +233,12 @@ export const projectsContent = {
 		},
 		{
 			title: "Hapaheaven",
-			subtitle: t(
-				"Web3 Social Media Platform",
-				"Plataforma de Mídia Social Web3",
-			),
+			subtitle: t("Web3 Social Media Platform", "Rede Social Web3"),
 			role: t("Software Engineer", "Engenheiro de Software"),
 			description: t(
-				"A Web3-integrated social media platform developed to handle decentralized user interactions and modern social networking features.",
-				"Uma plataforma de mídia social integrada com Web3, desenvolvida para lidar com interações descentralizadas de usuários e recursos modernos de redes sociais.",
+				"A Web3-integrated social media platform developed to handle decentralized user interactions and modern social networking features. Designed the backend architecture utilizing a modern TypeScript stack with strict data validation, and implemented efficient caching mechanisms to support real-time social features.",
+				"Rede social integrada com Web3, desenvolvida para lidar com interações descentralizadas e recursos modernos de engajamento. Projetei a arquitetura do backend utilizando uma stack TypeScript moderna com validação rigorosa de dados e implementei mecanismos de cache eficientes para suportar funcionalidades sociais em tempo real.",
 			),
-			achievements: [
-				t(
-					"Designed the backend architecture utilizing a modern TypeScript stack with strict data validation.",
-					"Design da arquitetura backend utilizando uma stack moderna TypeScript com validação rigorosa de dados.",
-				),
-				t(
-					"Implemented efficient caching mechanisms to support real-time social features.",
-					"Implementação de mecanismos eficientes de cache para suportar funcionalidades sociais em tempo real.",
-				),
-			],
 			stack: ["TypeScript", "NestJS", "Drizzle ORM", "Zod", "Redis", "Docker"],
 		},
 		{
@@ -325,19 +249,9 @@ export const projectsContent = {
 			),
 			role: t("Software Engineer", "Engenheiro de Software"),
 			description: t(
-				"A real-time monitoring dashboard designed to track, ingest, and record tweets based on specific hashtags, targeted keywords, or specific user profiles.",
-				"Um dashboard de monitoramento em tempo real projetado para rastrear, ingerir e registrar tweets com base em hashtags específicas, palavras-chave ou perfis de usuários.",
+				"A real-time monitoring dashboard designed to track, ingest, and record tweets based on specific hashtags, targeted keywords, or specific user profiles. Engineered a highly resilient data ingestion pipeline utilizing RabbitMQ to reliably queue and process high volumes of incoming streams, building the core engine to filter and store relevant data for downstream analytics.",
+				"Dashboard de monitoramento em tempo real projetado para rastrear, ingerir e salvar tweets com base em hashtags específicas, palavras-chave ou perfis de usuários alvo. Desenvolvi um pipeline de ingestão de dados altamente resiliente utilizando RabbitMQ para enfileirar e processar grandes volumes de streams de forma confiável, construindo o motor central que filtra e armazena os dados relevantes para análises futuras.",
 			),
-			achievements: [
-				t(
-					"Engineered a highly resilient data ingestion pipeline utilizing RabbitMQ to reliably queue and process high volumes of incoming streams.",
-					"Engenharia de um pipeline de ingestão de dados altamente resiliente utilizando RabbitMQ para enfileirar e processar altos volumes de streams de entrada de forma confiável.",
-				),
-				t(
-					"Built the core processing engine to filter and store relevant tweets for downstream analytics.",
-					"Construção do motor de processamento central para filtrar e armazenar tweets relevantes para análises downstream.",
-				),
-			],
 			stack: ["TypeScript", "Node.js", "RabbitMQ", "PostgreSQL", "Docker"],
 		},
 		{
@@ -348,19 +262,9 @@ export const projectsContent = {
 			),
 			role: t("IT Engineer", "Engenheiro de TI"),
 			description: t(
-				"End-to-end migration of company infrastructure from AWS to a bare-metal environment, significantly reducing cloud operational costs.",
-				"Migração completa da infraestrutura da empresa da AWS para um ambiente bare-metal, reduzindo significativamente os custos operacionais de nuvem.",
+				"End-to-end migration of company infrastructure from AWS to a bare-metal environment. Utilized a Proxmox cluster and Ceph distributed storage to eliminate single points of failure, isolating machines using SDN with the entire infrastructure running securely behind a Tailscale VPN.",
+				"Migração de ponta a ponta da infraestrutura da empresa saindo da AWS para um ambiente bare-metal. Utilizei um cluster Proxmox e armazenamento distribuído Ceph para eliminar pontos únicos de falha, isolando as máquinas através de redes definidas por software (SDN), com toda a infraestrutura rodando de forma segura atrás de uma VPN Tailscale.",
 			),
-			achievements: [
-				t(
-					"Utilized a Proxmox cluster and Ceph distributed storage to eliminate single points of failure.",
-					"Utilização de cluster Proxmox e armazenamento distribuído Ceph para eliminar pontos únicos de falha.",
-				),
-				t(
-					"Isolated machines using SDN, with the entire infrastructure running behind a VPN (Tailscale) for secure access.",
-					"Isolamento de máquinas usando SDN, com toda a infraestrutura rodando atrás de uma VPN (Tailscale) para acesso seguro.",
-				),
-			],
 			stack: [
 				"Proxmox",
 				"Ceph",
@@ -382,7 +286,7 @@ export const openSourceContent = {
 			repo: "https://github.com/zkingboos/portainer-action",
 			description: t(
 				"A powerful GitHub Action designed to manage Portainer environments, allowing for seamless automation of stack deployments and updates directly through CI/CD workflows.",
-				"Uma poderosa GitHub Action projetada para gerenciar ambientes Portainer, permitindo a automação contínua de implantações e atualizações de stacks diretamente através de fluxos de CI/CD.",
+				"Uma GitHub Action projetada para gerenciar ambientes Portainer, permitindo a automação contínua de implantações e atualizações de stacks diretamente através de fluxos de CI/CD.",
 			),
 			language: "JavaScript",
 			stars: 0,
@@ -392,7 +296,7 @@ export const openSourceContent = {
 			repo: "https://github.com/zkingboos/UniversalWrapper",
 			description: t(
 				"UniversalWrapper is a universal JDBC wrapper written in Java that simplifies database queries using functional interfaces, providing abstract MySQL and SQL support with built-in connection pooling through the HikariCP framework.",
-				"UniversalWrapper é um wrapper JDBC universal escrito em Java que simplifica as consultas ao banco de dados usando interfaces funcionais, fornecendo suporte abstrato a MySQL e SQL com pool de conexões integrado através do framework HikariCP.",
+				"O UniversalWrapper é um wrapper JDBC universal escrito em Java que simplifica as consultas ao banco de dados usando interfaces funcionais. Ele fornece suporte abstrato a MySQL e SQL com pool de conexões integrado através do framework HikariCP.",
 			),
 			language: "Java",
 			stars: 6,
@@ -402,7 +306,7 @@ export const openSourceContent = {
 			repo: "https://github.com/zkingboos/dontasktoask",
 			description: t(
 				"A pedagogical guide and repository that encourages efficient communication in programming communities by explaining why users should ask their questions directly instead of asking for permission to ask.",
-				"Um guia pedagógico e repositório que incentiva a comunicação eficiente em comunidades de programação, explicando por que os usuários devem fazer suas perguntas diretamente em vez de pedir permissão para perguntar.",
+				"Um guia pedagógico que incentiva a comunicação eficiente em comunidades de programação, explicando por que os usuários devem fazer suas perguntas diretamente em vez de pedir permissão para perguntar.",
 			),
 			language: "Markdown",
 			stars: 1,
@@ -412,7 +316,7 @@ export const openSourceContent = {
 			repo: "https://github.com/zkingboos/king-core",
 			description: t(
 				"A modular ecosystem and dependency injection framework designed for Java applications, specifically tailored to simplify module management and service bus integration for Bukkit and Spigot servers.",
-				"Um ecossistema modular e framework de injeção de dependência projetado para aplicações Java, especificamente adaptado para simplificar o gerenciamento de módulos e a integração de service bus para servidores Bukkit e Spigot.",
+				"Um ecossistema modular e framework de injeção de dependência projetado para aplicações Java, feito especificamente para simplificar o gerenciamento de módulos e a integração de barramentos de serviços para servidores Bukkit e Spigot.",
 			),
 			language: "Java",
 			stars: 3,
