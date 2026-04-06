@@ -27,7 +27,7 @@ const ProjectsSection = () => {
               </div>
               <p className="text-secondary-foreground/70 text-sm leading-relaxed mb-4">{l(project.description)}</p>
               <ul className="space-y-1.5 mb-4">
-                {project.achievements.map((a, j) => (
+                {project.achievements?.map((a, j) => (
                   <li key={j} className="text-xs text-muted-foreground leading-relaxed flex gap-2">
                     <span className="text-primary mt-0.5 shrink-0">▹</span>
                     <span>{l(a)}</span>
