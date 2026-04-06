@@ -69,12 +69,6 @@ const IndexContent = () => {
 						>
 							{l(navLinks[5].label)}
 						</a>
-						<button
-							onClick={() => window.print()}
-							className="font-mono text-xs px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
-						>
-							{l({ en: "Download CV", pt: "Baixar CV" })}
-						</button>
 						<LanguageToggle />
 					</div>
 				</div>
