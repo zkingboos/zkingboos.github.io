@@ -108,3 +108,129 @@
     border: 1px solid hsl(var(--primary) / 0.15);
   }
 }
+
+@media print {
+  :root {
+    --background: 0 0% 100% !important;
+    --foreground: 0 0% 0% !important;
+    --primary: 0 0% 0% !important;
+    --secondary: 0 0% 95% !important;
+    --muted: 0 0% 90% !important;
+    --border: 0 0% 80% !important;
+  }
+
+  /* Force elements to be visible (fixes Framer Motion issues during print) */
+  * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  html, body {
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Hide non-essential UI elements */
+  nav, 
+  button, 
+  .language-toggle,
+  footer,
+  #nebula-canvas,
+  canvas,
+  .animate-blink {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Remove glass effects and shadows for paper */
+  .glass, .glass-strong {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .glow-primary, .hover-glow-primary {
+    box-shadow: none !important;
+  }
+
+  /* Layout adjustments */
+  main, section {
+    padding: 0 !important;
+    margin-bottom: 2rem !important;
+    page-break-inside: avoid;
+  }
+
+  .min-h-screen {
+    min-height: auto !important;
+  }
+
+  #projects, #experience {
+    margin-top: 2rem !important;
+  }
+
+  .grid {
+    display: block !important;
+  }
+
+  .grid > div {
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Ensure text is black and links are readable */
+  p, span, h1, h2, h3, h4, li {
+    color: black !important;
+  }
+
+  .text-primary, .text-muted-foreground {
+    color: black !important;
+  }
+
+  /* Section titles */
+  h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem !important;
+    text-transform: uppercase;
+    font-weight: bold !important;
+  }
+
+  /* Projects and Experience items */
+  .group {
+    border-bottom: 1px solid #eee !important;
+    padding-bottom: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Keep links clickable and visually subtle */
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+    border-bottom: 1px solid #ddd !important;
+  }
+
+  /* Avoid cutting elements across pages */
+  h1, h2, h3 { page-break-after: avoid; }
+  ul, p { page-break-before: avoid; }
+  
+  @page {
+    margin: 1.5cm;
+    size: auto;
+  }
+}
