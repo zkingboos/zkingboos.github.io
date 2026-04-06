@@ -14,7 +14,7 @@ const LanguageToggle = () => {
 	return (
 		<button
 			onClick={toggleLang}
-			className="font-mono text-xs px-3 py-1.5 rounded-md border border-border text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors"
+			className="language-toggle font-mono text-xs px-3 py-1.5 rounded-md border border-border text-muted-foreground hover:text-foreground hover:border-primary/40 transition-colors"
 			aria-label="Toggle language"
 		>
 			{lang === "en" ? "PT 🇧🇷" : "EN 🇺🇸"}
@@ -25,9 +25,23 @@ const LanguageToggle = () => {
 const IndexContent = () => {
 	const { l } = useLanguage();
 	return (
-		<div className="min-h-screen bg-background relative">
-			<NebulaBg />
-			<nav className="fixed top-0 left-0 right-0 z-50 glass-strong border-b border-border">
+		<div className="min-h-screen print:min-h-0 bg-background relative">
+			<div className="print:hidden">
+				<NebulaBg />
+			</div>
+			{/* Link visível apenas no PRINT/PDF */}
+			<div className="hidden print:block print:mb-8">
+				<a
+					href="https://zkingboos.github.io"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-black text-black font-mono text-sm"
+				>
+					🌐 {l({ en: "Visit Portfolio: zkingboos.github.io", pt: "Visitar Portfólio: zkingboos.github.io" })}
+				</a>
+			</div>
+
+			<nav className="fixed top-0 left-0 right-0 z-50 glass-strong border-b border-border print:hidden">
 				<div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
 					<span className="font-mono text-sm text-primary font-semibold">
 						joseg<span className="animate-blink">_</span>
@@ -55,6 +69,12 @@ const IndexContent = () => {
 						>
 							{l(navLinks[5].label)}
 						</a>
+						<button
+							onClick={() => window.print()}
+							className="font-mono text-xs px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
+						>
+							{l({ en: "Download CV", pt: "Baixar CV" })}
+						</button>
 						<LanguageToggle />
 					</div>
 				</div>
