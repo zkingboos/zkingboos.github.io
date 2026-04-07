@@ -80,7 +80,7 @@ export const experienceContent = {
 			],
 		},
 		{
-			period: t("Aug 2023 — Jul 2024", "Ago 2023 — Jul 2024"),
+			period: t("Mar 2023 — Jul 2024", "Mar 2023 — Jul 2024"),
 			role: t("IT Engineer", "Engenheiro de TI"),
 			company: "Hivemedia",
 			description: t(
