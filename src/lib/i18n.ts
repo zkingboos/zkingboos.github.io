@@ -11,6 +11,12 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
   },
   fallbackLng: "en",
   supportedLngs: ["en", "pt"],
+  nonExplicitSupportedLngs: true,
+  detection: {
+    order: ["localStorage", "navigator"],
+    lookupLocalStorage: "portfolio_lang",
+    caches: ["localStorage"],
+  },
   interpolation: { escapeValue: false },
 });
 
