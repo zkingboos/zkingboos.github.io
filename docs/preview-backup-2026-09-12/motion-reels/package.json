@@ -1,0 +1,24 @@
+{
+  "name": "motion-reels",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "remotion render",
+    "preview": "remotion preview"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.240",
+    "@remotion/tailwind": "^4.0.240",
+    "lucide-react": "^0.475.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.240"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
+  }
+}
