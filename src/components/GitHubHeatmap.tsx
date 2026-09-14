@@ -23,9 +23,11 @@ export default function GitHubHeatmap() {
   const [svgMarkup, setSvgMarkup] = useState<string>("");
   const [total, setTotal] = useState<string>("1,395 contributions");
   const [periodLabel, setPeriodLabel] = useState<string>("in the last year");
+  const [loading, setLoading] = useState<boolean>(true);
 
   const load = useCallback(async (y: string) => {
     setYear(y);
+    setLoading(true);
     setPeriodLabel(y === "last" ? "in the last year" : `in ${y}`);
     try {
       const res = await fetch(
@@ -97,6 +99,8 @@ export default function GitHubHeatmap() {
       `);
     } catch (err) {
       console.warn("Real-time GitHub fetch fallback to cached state:", err);
+    } finally {
+      setLoading(false);
     }
   }, []);
 
@@ -149,10 +153,20 @@ export default function GitHubHeatmap() {
         </div>
       </div>
 
-      <div
-        className="overflow-x-auto pt-2 pb-1 transition-opacity duration-300"
-        dangerouslySetInnerHTML={{ __html: svgMarkup }}
-      />
+      <div className="relative overflow-x-auto pt-2 pb-1 transition-opacity duration-300">
+        <div
+          className={loading ? "opacity-40" : ""}
+          dangerouslySetInnerHTML={{ __html: svgMarkup }}
+        />
+        {loading && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="inline-flex items-center gap-2 text-[11px] font-mono text-[#09a6d6] bg-[#05070a]/80 px-3 py-1.5 rounded-lg border border-zinc-800">
+              <span className="w-3 h-3 border-2 border-[#09a6d6] border-t-transparent rounded-full animate-spin" />
+              Loading...
+            </span>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
