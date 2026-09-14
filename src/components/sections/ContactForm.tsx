@@ -52,7 +52,7 @@ export default function ContactForm() {
         </label>
         <select id="cf-subject" name="subject" className={inputClass} defaultValue="Proposta de projeto">
           <option className="bg-zinc-900">Proposta de projeto</option>
-          <option className="bg-zinc-900">Vaga Senior/Staff</option>
+          <option className="bg-zinc-900">Quero contratar</option>
           <option className="bg-zinc-900">Consultoria em infraestrutura</option>
           <option className="bg-zinc-900">Outro</option>
         </select>

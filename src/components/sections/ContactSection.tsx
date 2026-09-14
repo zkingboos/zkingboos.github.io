@@ -61,7 +61,13 @@ export default function ContactSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white font-display tracking-tight">
             {t("phase5_title")}
           </h2>
+          <p className="text-sm text-zinc-400 leading-relaxed">
+            Tem uma ideia, um projeto ou uma vaga que combina comigo? Me conta um
+            pouco que eu respondo em até 24 horas.
+          </p>
         </div>
+
+        <ContactForm />
 
         {/* 4 Informational Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 pt-6 border-t border-zinc-800/60 text-xs font-mono">
@@ -131,8 +137,6 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-
-      <ContactForm />
 
       <Footer />
     </section>
