@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useReactToPrint } from "react-to-print";
@@ -142,6 +142,16 @@ export default function CvPage() {
     contentRef: printRef,
     documentTitle: "curriculo-jose-gabriel",
   });
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang");
+    if (lang === "pt" || lang === "en") {
+      i18n.changeLanguage(lang);
+    } else {
+      i18n.changeLanguage("en");
+    }
+  }, [i18n]);
 
   const toggleLang = () => {
     i18n.changeLanguage(i18n.language?.startsWith("pt") ? "en" : "pt");
