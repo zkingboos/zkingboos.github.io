@@ -1,0 +1,124 @@
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useContactClock } from "@/hooks/useLiveClock";
+
+export default function ContactSection() {
+  const { t } = useTranslation();
+  const clock = useContactClock();
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    const email = "josegmelo.dev@gmail.com";
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(email).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2200);
+      });
+    }
+  };
+
+  return (
+    <section id="contact-hub" className="space-y-6 pt-8 border-t border-zinc-800">
+      {/* Main Banner */}
+      <div className="bg-gradient-to-br from-zinc-900/90 via-zinc-900/50 to-zinc-950 border border-zinc-800/80 p-8 sm:p-10 rounded-2xl relative overflow-hidden shadow-2xl">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div className="relative z-10 max-w-3xl space-y-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white font-display tracking-tight">
+            {t("phase5_title")}
+          </h2>
+          <p className="text-sm sm:text-base text-zinc-400 leading-relaxed max-w-2xl">
+            Disponível para contratos de engenharia de software de alta escala,
+            posições de Senior/Staff Backend &amp; Infraestrutura, ecossistemas
+            orientados a eventos (Kafka/Go/Java) e consultoria técnica em
+            clusters bare-metal (Proxmox + Ceph).
+          </p>
+        </div>
+
+        {/* 4 Informational Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 pt-6 border-t border-zinc-800/60 text-xs font-mono">
+          <div className="p-4 rounded-xl bg-black/40 border border-zinc-800/80 space-y-1.5">
+            <span className="text-zinc-500 text-[11px] uppercase tracking-wider block">
+              Localização &amp; Fuso
+            </span>
+            <div className="text-white font-bold text-sm">Brasil · Remoto Global</div>
+            <div className="text-emerald-400 text-[11px] flex items-center gap-1.5 pt-1">
+              <span>{clock}</span>
+            </div>
+          </div>
+
+          <div className="p-4 rounded-xl bg-black/40 border border-zinc-800/80 space-y-1.5">
+            <span className="text-zinc-500 text-[11px] uppercase tracking-wider block">
+              E-mail Direto
+            </span>
+            <a
+              href="mailto:josegmelo.dev@gmail.com"
+              className="text-white hover:text-blue-400 font-bold text-sm block truncate transition-colors"
+            >
+              josegmelo.dev@gmail.com
+            </a>
+            <button
+              type="button"
+              onClick={copyEmail}
+              className="text-blue-400 hover:text-blue-300 text-[11px] flex items-center gap-1 pt-1 transition-colors"
+            >
+              <span>{copied ? "Copiado" : "Copiar com 1 clique"}</span>
+            </button>
+          </div>
+
+          <div className="p-4 rounded-xl bg-black/40 border border-zinc-800/80 space-y-1.5">
+            <span className="text-zinc-500 text-[11px] uppercase tracking-wider block">
+              Currículo / Resume
+            </span>
+            <div className="text-white font-bold text-sm">PDF Técnico Oficial</div>
+            <a
+              href="https://drive.google.com/file/d/1GnGjLzJu_3zXgp5P3uJL2GAQewCMrRhG/view?usp=sharing"
+              target="_blank"
+              className="text-emerald-400 hover:underline text-[11px] flex items-center gap-1 pt-1"
+            >
+              <span>Baixar CV Atualizado ↗</span>
+            </a>
+          </div>
+
+          <div className="p-4 rounded-xl bg-black/40 border border-zinc-800/80 space-y-1.5">
+            <span className="text-zinc-500 text-[11px] uppercase tracking-wider block">
+              Tempo de Resposta
+            </span>
+            <div className="text-white font-bold text-sm">&lt; 24 Horas</div>
+            <div className="text-zinc-400 text-[11px] pt-1">
+              Via E-mail ou LinkedIn Direct
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
+      <div>© 2026 José Gabriel · Engineered with precision from roots to cloud</div>
+      <div className="flex items-center gap-5">
+        <a href="https://github.com/zkingboos" target="_blank" className="hover:text-white transition-colors">
+          GitHub @zkingboos
+        </a>
+        <a href="https://www.linkedin.com/in/josegabrielma/" target="_blank" className="hover:text-white transition-colors">
+          LinkedIn
+        </a>
+        <a href="mailto:josegmelo.dev@gmail.com" className="hover:text-white transition-colors">
+          Email
+        </a>
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-[#09a6d6] text-zinc-300 hover:text-white transition-all font-mono"
+          aria-label="Back to top"
+        >
+          ↑ Top
+        </button>
+      </div>
+    </footer>
+  );
+}
