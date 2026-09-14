@@ -79,12 +79,14 @@ export default function ContactSection() {
               <span>{clock}</span>
             </div>
             <div className="text-zinc-400 text-[11px] pt-1 leading-relaxed">
-              Seu fuso: <span className="text-cyan-300">{pretty}</span>
               {diff !== 0 && (
                 <span className="block">
-                  {diff > 0
-                    ? `${diff}h à frente do meu horário (BRT)`
-                    : `${Math.abs(diff)}h atrás do meu horário (BRT)`}
+                  Seu fuso: <span className="text-cyan-300">{pretty}</span>
+                  <span className="block">
+                    {diff > 0
+                      ? `${diff}h à frente do meu horário (BRT)`
+                      : `${Math.abs(diff)}h atrás do meu horário (BRT)`}
+                  </span>
                 </span>
               )}
             </div>
