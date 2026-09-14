@@ -8,7 +8,7 @@ export default function HeroBackdrop() {
       }}
     >
       <img
-        src="pawel_backdrop.jpg"
+        src="pawel_backdrop.webp"
         alt="Atmospheric cosmic fluid background"
         className="w-full h-full object-cover filter brightness-[0.88] contrast-[1.12]"
         style={{
