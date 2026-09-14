@@ -10,8 +10,10 @@ export default function ProductionArtifacts({ onOpenTopology }: Props) {
     <section id="production-artifacts" className="pt-0">
       {/* FULL-BLEED FLICKER DIVIDER */}
       <div
-        className="relative left-1/2 -ml-[50vw] w-screen h-[150px] overflow-hidden border-y border-zinc-800/40 pointer-events-none select-none"
+        className="relative h-[150px] overflow-hidden border-y border-zinc-800/40 pointer-events-none select-none"
         style={{
+          marginLeft: "calc(50% - 50vw)",
+          marginRight: "calc(50% - 50vw)",
           maskImage:
             "linear-gradient(to bottom, transparent 0%, black 28%, black 72%, transparent 100%)",
           WebkitMaskImage:

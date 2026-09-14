@@ -9,8 +9,10 @@ export default function LowLevelRoots() {
     <section className="pt-0 pb-0" id="phase4">
       {/* DATA STREAM DIVIDER */}
       <div
-        className="relative left-1/2 -ml-[50vw] w-screen h-16 overflow-hidden border-y border-zinc-800 pointer-events-none select-none"
+        className="relative h-16 overflow-hidden border-y border-zinc-800 pointer-events-none select-none"
         style={{
+          marginLeft: "calc(50% - 50vw)",
+          marginRight: "calc(50% - 50vw)",
           maskImage:
             "linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%)",
           WebkitMaskImage:

@@ -106,15 +106,20 @@ export default function TestimonialsSection() {
     <section id="who-worked-with-me" className="relative pt-10 pb-4">
       {/* Gradiente premium full-bleed */}
       <div
-        className="absolute left-1/2 -ml-[50vw] w-screen h-full top-0 pointer-events-none"
+        className="absolute left-0 right-0 h-full top-0 pointer-events-none"
         aria-hidden="true"
         style={{
+          marginLeft: "calc(50% - 50vw)",
+          marginRight: "calc(50% - 50vw)",
           background:
             "linear-gradient(180deg, #000000 0%, #101015 22%, #1c1c22 45%, #18181e 68%, #000000 100%)",
         }}
       ></div>
 
-      <div className="relative left-1/2 -ml-[50vw] w-screen">
+      <div
+        className="relative"
+        style={{ marginLeft: "calc(50% - 50vw)", marginRight: "calc(50% - 50vw)" }}
+      >
         <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10">
           <div className="t-title mb-6">
             <div className="text-center">

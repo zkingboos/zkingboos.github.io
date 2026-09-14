@@ -9,7 +9,13 @@ export default function HeroSection() {
   return (
     <section className="relative space-y-8 pb-8 sm:pb-10">
       {/* Backdrop atmosférico (full-bleed) */}
-      <div className="absolute top-0 left-1/2 -ml-[50vw] w-screen h-[700px] sm:h-[840px] lg:h-[920px] overflow-hidden pointer-events-none z-0 select-none">
+      <div
+        className="absolute top-0 left-0 right-0 h-[700px] sm:h-[840px] lg:h-[920px] overflow-hidden pointer-events-none z-0 select-none"
+        style={{
+          marginLeft: "calc(50% - 50vw)",
+          marginRight: "calc(50% - 50vw)",
+        }}
+      >
         <img
           src="pawel_backdrop.jpg"
           alt="Atmospheric cosmic fluid background"

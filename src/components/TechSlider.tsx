@@ -17,7 +17,10 @@ function Icon({ name, svg }: { name: string; svg: string }) {
 
 export default function TechSlider() {
   return (
-    <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-4 select-none my-6 overflow-hidden">
+    <div
+      className="relative py-4 select-none my-6 overflow-hidden"
+      style={{ marginLeft: "calc(50% - 50vw)", marginRight: "calc(50% - 50vw)" }}
+    >
       <div className="cylinder-mask relative w-full overflow-hidden">
         <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
         <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
