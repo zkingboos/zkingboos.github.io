@@ -16,7 +16,7 @@ const Index = () => {
     <div className="bg-black text-zinc-100 min-h-screen relative overflow-x-clip">
       <HeroBackdrop />
       <Header />
-      <main className="max-w-7xl mx-auto px-4 pt-0 pb-8 relative z-10">
+      <main className="max-w-7xl mx-auto px-4 pt-4 pb-8 relative z-10">
         <div id="view-fusion" className="space-y-20">
           <HeroSection />
           <CareerSection />

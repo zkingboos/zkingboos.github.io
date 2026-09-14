@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <section className="relative space-y-8 pb-8 sm:pb-10">
       {/* Badge topo: experiência + relógio + disponibilidade */}
-      <div className="relative flex items-center justify-between text-xs font-mono text-zinc-400 border-b border-zinc-800/60 pb-3">
+      <div className="relative flex flex-wrap items-center justify-between gap-x-3 gap-y-2 text-xs font-mono text-zinc-400 border-b border-zinc-800/60 pt-2 pb-3">
         <span className="flex items-center gap-2">
           <span className="text-zinc-200 font-bold tracking-wide">
             {t("hero_experience_tag")}
@@ -22,7 +22,7 @@ export default function HeroSection() {
             {clock}
           </span>
           <span className="text-zinc-600 hidden sm:inline">·</span>
-          <span className="text-zinc-300">Available Globally</span>
+          <span className="text-zinc-300 hidden sm:inline">Available Globally</span>
         </div>
       </div>
 

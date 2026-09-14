@@ -85,6 +85,7 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
 
   return (
     <div
+      data-lenis-prevent
       className="fixed inset-0 z-[100] items-start justify-center overflow-y-auto bg-black/80 backdrop-blur-sm p-4 md:p-8 flex"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
