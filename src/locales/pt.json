@@ -72,5 +72,16 @@
   "phase5_title": "Vamos construir algo sólido?",
   "phase5_desc": "Disponível para projetos de alta arquitetura, microsserviços em Go/Java, infraestrutura bare-metal e automação de inteligência artificial.",
   "footer_text": "© 2026 José Gabriel · Engenharia precisa das raízes à nuvem",
-  "btn_next_phrase": "Próxima frase"
+  "btn_next_phrase": "Próxima frase",
+  "about_bio": "Engenheiro de Software autodidata movido por profunda curiosidade sobre como os sistemas operam. Comecei com Java e Kotlin, agora expandindo para Go e Rust — focado em performance, redução de custos e nuvem on-premise.",
+  "os_label": "REPOSITÓRIOS OPEN SOURCE & FERRAMENTAS",
+  "projects_count": "5 projetos",
+  "open_link": "Abrir",
+  "lang_portuguese": "Português",
+  "lang_english": "Inglês",
+  "lang_fluent": "Fluente",
+  "lang_level_b1b2": "B1/B2 (Upper Intermediate)",
+  "host_14": "14 anos técnico",
+  "host_5": "5 anos profissional",
+  "host_desc": "Da paixão precoce por sistemas aos ambientes bare-metal em produção — raízes low-level que sustentam infraestrutura soberana."
 }

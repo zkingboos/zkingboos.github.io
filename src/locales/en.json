@@ -72,5 +72,16 @@
   "phase5_title": "Let's build something solid?",
   "phase5_desc": "Available for high-scale architecture, Go/Java microservices, bare-metal infrastructure, and artificial intelligence automation.",
   "footer_text": "© 2026 José Gabriel · Engineered with precision from roots to cloud",
-  "btn_next_phrase": "Next phrase"
+  "btn_next_phrase": "Next phrase",
+  "about_bio": "Self-taught Software Engineer driven by deep curiosity for how systems operate. Started with Java and Kotlin, now expanding into Go and Rust — focused on performance, cost reduction and on-premise cloud.",
+  "os_label": "OPEN SOURCE REPOSITORIES & TOOLING",
+  "projects_count": "5 projects",
+  "open_link": "Open",
+  "lang_portuguese": "Português",
+  "lang_english": "Inglês",
+  "lang_fluent": "Fluente",
+  "lang_level_b1b2": "B1/B2 (Upper Intermediate)",
+  "host_14": "14 years technical",
+  "host_5": "5 years professional",
+  "host_desc": "From early passion for systems to production bare-metal environments — low-level roots that sustain sovereign infrastructure."
 }

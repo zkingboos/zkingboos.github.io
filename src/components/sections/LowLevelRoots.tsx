@@ -70,10 +70,7 @@ export default function LowLevelRoots() {
               </div>
             </div>
             <p className="text-zinc-300 text-xs leading-relaxed">
-              Self-taught Software Engineer driven by deep curiosity for how
-              systems operate. Started with Java and Kotlin, now expanding into
-              Go and Rust &mdash; focused on performance, cost reduction and
-              on-premise cloud.
+              {t("about_bio")}
             </p>
             <div className="flex flex-wrap gap-1.5 mt-3">
               <span className="fbento-chip">Go</span>
@@ -89,14 +86,14 @@ export default function LowLevelRoots() {
             </div>
             <div className="space-y-3 mt-5 pt-4 border-t border-white/10">
               <div className="lang-row">
-                <span className="lang-name">Português</span>
+                <span className="lang-name">{t("lang_portuguese")}</span>
                 <span className="lang-dots"></span>
-                <span className="lang-level">Fluente</span>
+                <span className="lang-level">{t("lang_fluent")}</span>
               </div>
               <div className="lang-row">
-                <span className="lang-name">Inglês</span>
+                <span className="lang-name">{t("lang_english")}</span>
                 <span className="lang-dots"></span>
-                <span className="lang-level">B1/B2 (Upper Intermediate)</span>
+                <span className="lang-level">{t("lang_level_b1b2")}</span>
               </div>
             </div>
           </div>
@@ -112,9 +109,9 @@ export default function LowLevelRoots() {
           <div className="fbento-visual">
             <div className="flex items-center justify-between mb-3">
               <span className="font-mono text-[11px] text-zinc-400 font-semibold">
-                OPEN SOURCE REPOSITORIES &amp; TOOLING
+                {t("os_label")}
               </span>
-              <span className="fbento-chip">5 projects</span>
+              <span className="fbento-chip">{t("projects_count")}</span>
             </div>
             <div className="grid grid-cols-1 gap-2">
               {openSourceRepos.map((repo) => (
@@ -136,7 +133,7 @@ export default function LowLevelRoots() {
                         rel="noopener"
                         className="text-zinc-500 hover:text-[#09a6d6] text-[10px] font-mono"
                       >
-                        Abrir
+                        {t("open_link")}
                       </a>
                       <span className="text-zinc-600">&#8599;</span>
                     </div>
@@ -177,15 +174,13 @@ export default function LowLevelRoots() {
               className="text-4xl lg:text-5xl font-display font-bold tracking-tight bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(180deg, #ffffff 0%, #09a6d6 100%)" }}
             >
-              14 anos técnico
+              {t("host_14")}
             </div>
             <div className="text-zinc-400 text-xs font-mono mt-2 uppercase tracking-wider">
-              5 anos profissional
+              {t("host_5")}
             </div>
             <div className="text-zinc-500 text-[11px] mt-3 max-w-[240px]">
-              Da paixão precoce por sistemas aos ambientes bare-metal em
-              produ&ccedil;&atilde;o &mdash; ra&iacute;zes low-level que sustentam
-              infraestrutura soberana.
+              {t("host_desc")}
             </div>
           </div>
           <a href="#section-career" className="fbento-footer">
