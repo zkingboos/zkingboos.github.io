@@ -143,9 +143,10 @@ export default function ContactSection() {
 }
 
 function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
-      <div>© 2026 José Gabriel · Engineered with precision from roots to cloud</div>
+      <div>{t("footer_text")}</div>
       <div className="flex items-center gap-5">
         <a href="https://github.com/zkingboos" target="_blank" className="hover:text-white transition-colors">
           GitHub @zkingboos
