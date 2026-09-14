@@ -87,7 +87,6 @@ export default function ContactSection() {
                     : `${Math.abs(diff)}h atrás do meu horário (BRT)`}
                 </span>
               )}
-              {diff === 0 && <span className="block">Mesmo fuso que o meu (BRT)</span>}
             </div>
           </div>
 
