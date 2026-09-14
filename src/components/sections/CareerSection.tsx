@@ -13,7 +13,7 @@ export default function CareerSection() {
       </div>
 
       {/* Section Title & Meta */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-zinc-800/80 pb-3">
+      <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-zinc-800/80 pb-3">
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold font-display text-white">
             {t("phase2_title")}
@@ -23,7 +23,7 @@ export default function CareerSection() {
       </div>
 
       {/* Timeline */}
-      <div className="space-y-4">
+      <div className="relative z-10 space-y-4">
         <div className="m1">
           {career.map((item) => (
             <div className="m1-item" key={item.name}>

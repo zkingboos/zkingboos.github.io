@@ -8,8 +8,8 @@ export default function HeroSection() {
 
   return (
     <section className="relative space-y-8 pb-8 sm:pb-10">
-      {/* Backdrop atmosférico */}
-      <div className="absolute top-0 left-0 right-0 w-full h-[700px] sm:h-[840px] lg:h-[920px] overflow-hidden pointer-events-none z-0 select-none">
+      {/* Backdrop atmosférico (full-bleed) */}
+      <div className="absolute top-0 left-1/2 -ml-[50vw] w-screen h-[700px] sm:h-[840px] lg:h-[920px] overflow-hidden pointer-events-none z-0 select-none">
         <img
           src="pawel_backdrop.jpg"
           alt="Atmospheric cosmic fluid background"
@@ -97,7 +97,23 @@ export default function HeroSection() {
             <img
               src="https://avatars.githubusercontent.com/u/42500187?v=4"
               alt="José Gabriel"
-              className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-3xl object-cover border-2 border-zinc-800/90 bg-zinc-950/80 backdrop-blur-md shadow-2xl"
+              className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-3xl object-cover border-2 border-zinc-800/90 bg-zinc-950/80 backdrop-blur-md shadow-2xl relative"
+            />
+            {/* Vinheta */}
+            <div
+              className="absolute inset-0 rounded-3xl pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.55) 100%)",
+              }}
+            />
+            {/* Ruído (grain) */}
+            <div
+              className="absolute inset-0 rounded-3xl pointer-events-none mix-blend-overlay opacity-30"
+              style={{
+                backgroundImage:
+                  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+              }}
             />
           </div>
         </div>

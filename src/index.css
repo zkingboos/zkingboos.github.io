@@ -412,7 +412,7 @@
         transform: translateX(0);
       }
       100% {
-        transform: translateX(-50%);
+        transform: translateX(calc(-50% - 8px));
       }
     }
     .animate-cylinder-scroll {
