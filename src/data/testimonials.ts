@@ -66,7 +66,7 @@ export const testimonials: Testimonial[] = [
     name: "Gustavo Burlinski",
     role: { en: "Client", pt: "Cliente" },
     img: "gustavo.jpeg",
-    q: "Depois eu adiciono algo aqui",
+    q: "O José desenvolveu o site da minha loja online, a GBEletros, e ficou muito bom. Ele montou tudo do jeito que eu precisava e ainda me deu controle do estoque, para eu saber o que entra e o que sai sem dor de cabeça. Foi tudo tranquilo e o resultado ficou profissional.",
   },
   {
     name: "Harvey Devlin",
