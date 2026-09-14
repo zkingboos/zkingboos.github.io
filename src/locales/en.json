@@ -115,5 +115,16 @@
   "form_send": "Send message ↗",
   "form_sending": "Sending...",
   "form_success": "Message sent successfully!",
-  "form_error": "Error sending. Try again or email me."
+  "form_error": "Error sending. Try again or email me.",
+  "topo_volume_unit": "videos/day",
+  "topo_c2_desc": "Full operational control: scraping triggers, worker status, data queries and alerts",
+  "topo_dispatch": "▼ Operation & Dispatch Commands",
+  "topo_scraper_rd": "Reverse Engineering (In-house R&D)",
+  "topo_ingest_chunk": "Frame Chunking & S3 Upload",
+  "topo_broker_dedup": "Job Deduplication & State",
+  "topo_workers": "16x CONCURRENT WORKERS",
+  "topo_ml_auth": "UGC Authenticity & Verification",
+  "topo_jobs": "jobs",
+  "topo_workers_short": "workers",
+  "topo_dedup": "dedup"
 }

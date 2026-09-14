@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useDragPan } from "@/hooks/useDragPan";
 import { stopLenis, startLenis } from "@/lib/lenis";
 
@@ -8,6 +9,7 @@ interface Props {
 }
 
 export default function AffiliateTopologyModal({ open, onClose }: Props) {
+  const { t } = useTranslation();
   const viewportRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
   const { onMouseDown, onMouseMove, onMouseUp, onTouchStart, onTouchMove, onTouchEnd, reset } =
@@ -121,7 +123,7 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
                   <span className="text-emerald-400 font-bold">
                     {count.toLocaleString("pt-BR")}
                   </span>
-                  <span className="text-zinc-500">vídeos/dia</span>
+                  <span className="text-zinc-500">{t("topo_volume_unit")}</span>
                 </div>
               </div>
 
@@ -140,8 +142,7 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
                         </span>
                       </div>
                       <div className="text-[11px] text-zinc-400 font-mono pt-0.5">
-                        Controle operacional total: Triggers de scraping, status de
-                        workers, queries de dados e alertas
+                        {t("topo_c2_desc")}
                       </div>
                     </div>
                   </div>
@@ -156,7 +157,7 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
               <div className="flex justify-center -my-3 min-w-0 lg:min-w-[820px]">
                 <div className="flex flex-col items-center">
                   <span className="text-[9px] font-mono text-indigo-400 bg-zinc-950 px-2 py-0.5 rounded border border-indigo-900/60 mb-0.5">
-                    ▼ Comandos de Operação &amp; Dispatch
+                    {t("topo_dispatch")}
                   </span>
                   <svg className="w-4 h-5" viewBox="0 0 16 20" fill="none">
                     <line x1="8" y1="0" x2="8" y2="16" stroke="#818cf8" strokeWidth="2" />
@@ -174,7 +175,7 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
                   <div className="font-bold text-sm text-white font-mono">[ In-House Scraper ]</div>
                   <div className="text-[11px] text-zinc-300">YouTube · TikTok · Instagram · X</div>
                   <div className="text-[10px] font-mono text-cyan-400 pt-1 border-t border-zinc-900">
-                    Engenharia Reversa (P&amp;D Próprio)
+                    {t("topo_scraper_rd")}
                   </div>
                 </div>
 
@@ -196,14 +197,14 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
                   <div className="font-bold text-sm text-white font-mono">[ svc-video-ingest ]</div>
                   <div className="text-[11px] text-zinc-300">Bun + Hono + FFmpeg</div>
                   <div className="text-[10px] font-mono text-blue-300 pt-1 border-t border-zinc-900">
-                    Chunking de Frames &amp; S3 Upload
+                    {t("topo_ingest_chunk")}
                   </div>
                 </div>
 
                 <div className="flex-1 flex flex-col items-center px-2">
                   <div className="text-[10px] font-mono text-emerald-300 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800 mb-1 whitespace-nowrap">
                     RabbitMQ Async Request →{" "}
-                    <span>{(tele.queue / 1000).toFixed(1).replace(".", ",")}k</span> jobs
+                    <span>{(tele.queue / 1000).toFixed(1).replace(".", ",")}k</span> {t("topo_jobs")}
                   </div>
                   <svg className="w-full h-4" viewBox="0 0 200 16" fill="none">
                     <line x1="10" y1="8" x2="190" y2="8" stroke="#10b981" strokeWidth="2" className="stream-forward" />
@@ -218,7 +219,7 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
                   <div className="font-bold text-sm text-white font-mono">[ RabbitMQ Cluster ]</div>
                   <div className="text-[11px] text-zinc-300">AMQP Async Request Queue</div>
                   <div className="text-[10px] font-mono text-emerald-400 pt-1 border-t border-zinc-900">
-                    Deduplicação de Jobs &amp; State
+                    {t("topo_broker_dedup")}
                   </div>
                 </div>
               </div>
@@ -250,12 +251,12 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
                     CORE MACHINE LEARNING
                   </div>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800">
-                    16x WORKERS CONCORRENTES
+                    {t("topo_workers")}
                   </span>
                   <div className="font-bold text-sm text-white font-mono">[ svc-ml-inference ]</div>
                   <div className="text-[11px] text-zinc-300">Python ML (PyTorch / ONNX)</div>
                   <div className="text-[10px] font-mono text-cyan-300 pt-1 border-t border-zinc-900">
-                    Autenticidade &amp; Verificação UGC
+                    {t("topo_ml_auth")}
                   </div>
                 </div>
 

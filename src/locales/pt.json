@@ -115,5 +115,16 @@
   "form_send": "Enviar mensagem ↗",
   "form_sending": "Enviando...",
   "form_success": "Mensagem enviada com sucesso!",
-  "form_error": "Erro ao enviar. Tente novamente ou me chame por email."
+  "form_error": "Erro ao enviar. Tente novamente ou me chame por email.",
+  "topo_volume_unit": "vídeos/dia",
+  "topo_c2_desc": "Controle operacional total: Triggers de scraping, status de workers, queries de dados e alertas",
+  "topo_dispatch": "▼ Comandos de Operação & Dispatch",
+  "topo_scraper_rd": "Engenharia Reversa (P&D Próprio)",
+  "topo_ingest_chunk": "Chunking de Frames & S3 Upload",
+  "topo_broker_dedup": "Deduplicação de Jobs & State",
+  "topo_workers": "16x WORKERS CONCORRENTES",
+  "topo_ml_auth": "Autenticidade & Verificação UGC",
+  "topo_jobs": "jobs",
+  "topo_workers_short": "workers",
+  "topo_dedup": "dedup"
 }
