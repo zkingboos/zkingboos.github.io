@@ -126,5 +126,12 @@
   "topo_ml_auth": "Autenticidade & Verificação UGC",
   "topo_jobs": "jobs",
   "topo_workers_short": "workers",
-  "topo_dedup": "dedup"
+  "topo_dedup": "dedup",
+  "section_summary": "Resumo",
+  "section_experience": "Experiência",
+  "section_projects": "Projetos",
+  "section_skills": "Habilidades",
+  "section_open_source": "Open Source",
+  "section_languages": "Idiomas",
+  "cv_download": "Baixar PDF"
 }

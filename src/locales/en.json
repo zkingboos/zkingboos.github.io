@@ -126,5 +126,12 @@
   "topo_ml_auth": "UGC Authenticity & Verification",
   "topo_jobs": "jobs",
   "topo_workers_short": "workers",
-  "topo_dedup": "dedup"
+  "topo_dedup": "dedup",
+  "section_summary": "Summary",
+  "section_experience": "Experience",
+  "section_projects": "Projects",
+  "section_skills": "Skills",
+  "section_open_source": "Open Source",
+  "section_languages": "Languages",
+  "cv_download": "Download PDF"
 }
