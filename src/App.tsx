@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { initLenis } from "@/lib/lenis";
+import { initLenis, destroyLenis } from "@/lib/lenis";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const App = () => {
   useEffect(() => {
-    const lenis = initLenis();
+    initLenis();
     return () => {
-      lenis.destroy();
+      destroyLenis();
     };
   }, []);
 

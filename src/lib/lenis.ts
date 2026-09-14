@@ -15,13 +15,8 @@ export function initLenis(): Lenis {
     wheelMultiplier: 0.85,
     touchMultiplier: 1.5,
     infinite: false,
+    autoRaf: true,
   });
-
-  function raf(time: number) {
-    lenis!.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
 
   document.addEventListener("click", function (e) {
     const target = e.target as HTMLElement | null;
@@ -60,4 +55,9 @@ export function stopLenis() {
 
 export function startLenis() {
   lenis?.start();
+}
+
+export function destroyLenis() {
+  lenis?.destroy();
+  lenis = null;
 }
