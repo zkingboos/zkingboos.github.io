@@ -117,8 +117,7 @@ export default function ContactSection() {
             </span>
             <div className="text-white font-bold text-sm">{t("contact_cv_value")}</div>
             <a
-              href="https://drive.google.com/file/d/1GnGjLzJu_3zXgp5P3uJL2GAQewCMrRhG/view?usp=sharing"
-              target="_blank"
+              href="/cv"
               className="text-emerald-400 hover:underline text-[11px] flex items-center gap-1 pt-1"
             >
               <span>{t("contact_cv_link")}</span>
