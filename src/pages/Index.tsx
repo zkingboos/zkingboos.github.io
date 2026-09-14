@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "@/components/layout/Header";
+import HeroBackdrop from "@/components/HeroBackdrop";
 import HeroSection from "@/components/sections/HeroSection";
 import CareerSection from "@/components/sections/CareerSection";
 import ProductionArtifacts from "@/components/sections/ProductionArtifacts";
@@ -13,6 +14,7 @@ const Index = () => {
 
   return (
     <div className="bg-black text-zinc-100 min-h-screen relative overflow-x-clip">
+      <HeroBackdrop />
       <Header />
       <main className="max-w-7xl mx-auto px-4 pt-0 pb-8 relative z-10">
         <div id="view-fusion" className="space-y-20">

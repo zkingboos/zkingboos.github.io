@@ -31,9 +31,9 @@ function Card({
       className="t-card-real bg-zinc-900 border border-zinc-700 rounded-2xl p-6 flex flex-col justify-between gap-4 shadow-xl"
       data-idx={idx}
       style={{
-        borderColor: active ? "rgba(63,63,70,0.9)" : "rgba(82,82,91,0.7)",
-        opacity: active ? 1 : 0.4,
-        transform: active ? "scale(1.02)" : "scale(0.99)",
+        borderColor: active ? "rgba(63,63,70,0.9)" : "rgba(82,82,91,0.5)",
+        opacity: active ? 1 : 0.55,
+        transform: active ? "scale(1.01)" : "scale(0.99)",
         boxShadow: active ? "0 8px 24px rgba(0,0,0,0.5)" : "none",
       }}
     >

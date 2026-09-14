@@ -2,10 +2,25 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useContactClock } from "@/hooks/useLiveClock";
 
+function visitorInfo() {
+  let timezone = "America/Sao_Paulo";
+  let diff = 0; // horas em relação ao BRT (UTC-3)
+  try {
+    timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "America/Sao_Paulo";
+    const visitorOffsetMin = -new Date().getTimezoneOffset(); // offset UTC em minutos
+    const brtOffsetMin = -180; // BRT = UTC-3
+    diff = Math.round((visitorOffsetMin - brtOffsetMin) / 60);
+  } catch {
+    /* keep defaults */
+  }
+  return { timezone, diff };
+}
+
 export default function ContactSection() {
   const { t } = useTranslation();
   const clock = useContactClock();
   const [copied, setCopied] = useState(false);
+  const { timezone, diff } = visitorInfo();
 
   const copyEmail = () => {
     const email = "josegmelo.dev@gmail.com";
@@ -44,6 +59,17 @@ export default function ContactSection() {
             <div className="text-white font-bold text-sm">Brasil · Remoto Global</div>
             <div className="text-emerald-400 text-[11px] flex items-center gap-1.5 pt-1">
               <span>{clock}</span>
+            </div>
+            <div className="text-zinc-400 text-[11px] pt-1 leading-relaxed">
+              Seu fuso: <span className="text-cyan-300">{timezone}</span>
+              {diff !== 0 && (
+                <span className="block">
+                  {diff > 0
+                    ? `${diff}h à frente do meu horário (BRT)`
+                    : `${Math.abs(diff)}h atrás do meu horário (BRT)`}
+                </span>
+              )}
+              {diff === 0 && <span className="block">Mesmo fuso que o meu (BRT)</span>}
             </div>
           </div>
 
