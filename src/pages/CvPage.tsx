@@ -136,17 +136,29 @@ const CvContent = React.forwardRef<HTMLDivElement>((_props, ref) => {
 });
 
 export default function CvPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const printRef = useRef<HTMLDivElement>(null);
   const handlePrint = useReactToPrint({
     contentRef: printRef,
     documentTitle: "curriculo-jose-gabriel",
   });
 
+  const toggleLang = () => {
+    i18n.changeLanguage(i18n.language?.startsWith("pt") ? "en" : "pt");
+  };
+  const langLabel = i18n.language?.startsWith("pt") ? "PT" : "EN";
+
   return (
     <div className="min-h-screen bg-zinc-100 text-zinc-900" data-lenis-prevent>
       <div className="max-w-3xl mx-auto px-6 py-10">
-        <div className="flex justify-end mb-4 print:hidden">
+        <div className="flex justify-end items-center gap-3 mb-4 print:hidden">
+          <button
+            onClick={toggleLang}
+            className="px-3 py-2 rounded-lg bg-white border border-zinc-300 hover:border-zinc-500 text-zinc-700 font-mono text-sm font-semibold transition-colors"
+            aria-label="Toggle language"
+          >
+            {langLabel}
+          </button>
           <button
             onClick={() => handlePrint()}
             className="px-4 py-2 rounded-lg bg-[#09a6d6] hover:bg-[#0ca9cf] text-white font-mono text-sm font-semibold transition-colors"
