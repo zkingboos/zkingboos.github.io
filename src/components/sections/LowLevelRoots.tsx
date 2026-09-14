@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
 import GitHubHeatmap from "@/components/GitHubHeatmap";
 import { openSourceRepos, stackBars } from "@/data/openSource";
+import { useLang } from "@/lib/lang";
 
 export default function LowLevelRoots() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = useLang(i18n.language);
 
   return (
     <section className="pt-0 pb-0" id="phase4">
@@ -140,7 +142,7 @@ export default function LowLevelRoots() {
                     </div>
                   </div>
                   <p className="text-zinc-500 text-[11px] leading-relaxed mt-1">
-                    {repo.desc}
+                    {repo.desc[lang]}
                   </p>
                 </div>
               ))}
@@ -220,7 +222,7 @@ export default function LowLevelRoots() {
                       {bar.code}{" "}
                       <span className="text-zinc-500">{bar.label}</span>
                     </span>
-                    <span className="text-zinc-500">{bar.desc}</span>
+                    <span className="text-zinc-500">{bar.desc[lang]}</span>
                   </div>
                   <div className="fbento-bar-bg">
                     <div className="fbento-bar-fill" style={{ width: bar.width }}></div>
