@@ -35,7 +35,7 @@ export default function Header() {
         {/* Clean Navigation Links */}
         <nav className="hidden md:flex items-center gap-6 text-xs font-mono text-zinc-400">
           <a href="#view-fusion" className="hover:text-white transition-colors">
-            Studio
+            {t("nav_studio")}
           </a>
           <a href="#section-career" className="hover:text-white transition-colors">
             {t("nav_timeline")}
