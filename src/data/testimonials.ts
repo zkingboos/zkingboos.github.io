@@ -1,6 +1,8 @@
+import type { LocalizedText } from "@/lib/lang";
+
 export interface Testimonial {
   name: string;
-  role: string;
+  role: LocalizedText | string;
   img: string;
   q: string;
 }
@@ -20,31 +22,31 @@ export const testimonials: Testimonial[] = [
   },
   {
     name: "Ian Libânio",
-    role: "Colaborador",
+    role: { en: "Collaborator", pt: "Colaborador" },
     img: "ianlibano.jpg",
     q: "Trabalhar com o José foi uma excelente experiência desde o primeiro momento. A comunicação sempre foi fácil e eficiente, as entregas foram rápidas e de alta qualidade, e seu grande conhecimento e profissionalismo ficaram evidentes durante todo o trabalho.",
   },
   {
     name: "Yan Spatt",
-    role: "Colaborador",
+    role: { en: "Collaborator", pt: "Colaborador" },
     img: "yanspatt.jpg",
     q: "Trabalhar ao lado dele é ter a segurança de contar com um engenheiro brilhante e extremamente resolutivo. Enquanto muitos profissionais ficam presos a discussões conceituais que atrasam a entrega, ele projeta arquiteturas sólidas, antecipa pontos de falha e executa soluções que funcionam na prática com estabilidade impecável. É a referência técnica necessária para transformar requisitos complexos em software confiável, seguro e de alta performance.",
   },
   {
     name: "Rafael Aguiar",
-    role: "Docente UENP",
+    role: { en: "UENP Professor", pt: "Docente UENP" },
     img: "rafaelaguiar.jpg",
     q: "Foi um dos grandes destaques nas minhas disciplinas. Ele une uma postura acadêmica exemplar — entregando todos os projetos e alcançando as maiores notas — com a agilidade e a visão de quem já resolve problemas reais como programador. É um talento técnico e pronto para qualquer desafio.",
   },
   {
     name: "Gabriel Henry",
-    role: "Cliente",
+    role: { en: "Client", pt: "Cliente" },
     img: "",
     q: "Achei excelente, sanou minhas dúvidas me explicando de forma super didática, entregou o projeto rápido, tudo funcionando perfeitamente... Enfim! Um excelente desenvolvedor, e um excelente humano. Espero que você trabalhe em mais alguns projetos meus.",
   },
   {
     name: "Guilherme Kauã",
-    role: "Colaborador",
+    role: { en: "Collaborator", pt: "Colaborador" },
     img: "guilhermekaua.png",
     q: "Trabalhei com o José em alguns projetos freelance de sites, eu no front-end e ele no back-end. Foi muito bom ter ele como parceiro nesses trabalhos, a gente conseguia conversar sobre o que precisava ser feito, tirar dúvidas e resolver juntos os problemas que apareciam no caminho. Tive uma boa experiência e trabalharia novamente com ele.",
   },
@@ -62,7 +64,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     name: "Gustavo Burlinski",
-    role: "Cliente",
+    role: { en: "Client", pt: "Cliente" },
     img: "gustavo.jpeg",
     q: "Depois eu adiciono algo aqui",
   },
@@ -74,7 +76,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     name: "Thiago Marinho",
-    role: "Colaborador",
+    role: { en: "Collaborator", pt: "Colaborador" },
     img: "",
     q: "Trabalhar com o José tem um defeito: ele acostuma mal. Você explica o problema uma vez, ele entende, resolve e ainda costuma voltar com algo melhor do que você pediu. Além de mandar muito bem tecnicamente, é tranquilo de trabalhar e não transforma qualquer tarefa em uma reunião de duas horas. Recomendo sem medo.",
   },

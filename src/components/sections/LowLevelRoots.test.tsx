@@ -17,7 +17,7 @@ describe("LowLevelRoots", () => {
     );
     expect(screen.getByText("Low-Level Roots")).toBeTruthy();
     expect(screen.getByText("José Gabriel")).toBeTruthy();
-    expect(screen.getByText("Português")).toBeTruthy();
-    expect(screen.getByText("Inglês")).toBeTruthy();
+    expect(screen.getByText("Portuguese")).toBeTruthy();
+    expect(screen.getByText("English")).toBeTruthy();
   });
 });

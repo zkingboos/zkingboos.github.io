@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { testimonials } from "@/data/testimonials";
+import { useLang } from "@/lib/lang";
 
 function cardCount(): number {
   const w = window.innerWidth;
@@ -13,10 +14,12 @@ function Card({
   t,
   idx,
   active,
+  lang,
 }: {
   t: (typeof testimonials)[number];
   idx: number;
   active: boolean;
+  lang: "en" | "pt";
 }) {
   const avatar = t.img ? (
     <img src={t.img} alt={t.name} className="w-11 h-11 rounded-full object-cover" />
@@ -44,7 +47,9 @@ function Card({
         {avatar}
         <div>
           <div className="font-bold text-white text-base">{t.name}</div>
-          <div className="text-zinc-400 text-xs font-mono">{t.role}</div>
+          <div className="text-zinc-400 text-xs font-mono">
+            {typeof t.role === "string" ? t.role : t.role[lang]}
+          </div>
         </div>
       </div>
     </article>
@@ -52,7 +57,8 @@ function Card({
 }
 
 export default function TestimonialsSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = useLang(i18n.language);
   const [active, setActive] = useState(0);
   const gridRef = useRef<HTMLDivElement>(null);
   const isMobileRef = useRef(false);
@@ -184,7 +190,7 @@ export default function TestimonialsSection() {
               <div className="m-col" key={ci}>
                 {col.map((d, pos) => {
                   const idx = indices[pos];
-                  return <Card key={d.name} t={d} idx={idx} active={idx === active} />;
+                  return <Card key={d.name} t={d} idx={idx} active={idx === active} lang={lang} />;
                 })}
               </div>
             ))}
