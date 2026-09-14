@@ -109,12 +109,12 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
             <div
               id="topology-inner"
               ref={innerRef}
-              className="min-w-[820px] space-y-6 will-change-transform transition-transform duration-75 relative z-10"
+              className="min-w-0 lg:min-w-[820px] space-y-6 will-change-transform transition-transform duration-75 relative z-10"
               onMouseDown={onMouseDown}
               onTouchStart={onTouchStart}
             >
               {/* VOLUME TOTAL */}
-              <div className="flex items-center justify-center min-w-[820px]">
+              <div className="flex items-center justify-center min-w-0 lg:min-w-[820px]">
                 <div className="flex items-center gap-2 text-xs font-mono text-zinc-400 bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl">
                   <span>Volume:</span>
                   <span className="text-emerald-400 font-bold">
@@ -125,7 +125,7 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
               </div>
 
               {/* ORCHESTRATION LAYER */}
-              <div className="flex items-center justify-center min-w-[820px]">
+              <div className="flex items-center justify-center min-w-0 lg:min-w-[820px]">
                 <div className="bg-zinc-950 border-2 border-indigo-600/80 p-4 rounded-2xl w-full max-w-2xl flex items-center justify-between gap-4 shadow-xl">
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 rounded-full bg-indigo-400 animate-pulse"></div>
@@ -152,7 +152,7 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
               </div>
 
               {/* Vertical Dispatch */}
-              <div className="flex justify-center -my-3 min-w-[820px]">
+              <div className="flex justify-center -my-3 min-w-0 lg:min-w-[820px]">
                 <div className="flex flex-col items-center">
                   <span className="text-[9px] font-mono text-indigo-400 bg-zinc-950 px-2 py-0.5 rounded border border-indigo-900/60 mb-0.5">
                     ▼ Comandos de Operação &amp; Dispatch
@@ -165,7 +165,7 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
               </div>
 
               {/* FLOW ROW 1 */}
-              <div className="flex flex-col lg:flex-row items-center justify-between gap-4 min-w-[820px]">
+              <div className="flex flex-col lg:flex-row items-center justify-between gap-4 min-w-0 lg:min-w-[820px]">
                 <div className="bg-zinc-950 border-2 border-cyan-800/80 p-5 rounded-2xl w-60 text-center space-y-2 shadow-lg">
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold">
                     PROPRIETARY SCRAPER
@@ -223,7 +223,7 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
               </div>
 
               {/* VERTICAL CONNECTOR */}
-              <div className="flex items-center justify-center py-1 min-w-[820px]">
+              <div className="flex items-center justify-center py-1 min-w-0 lg:min-w-[820px]">
                 <div className="flex flex-col items-center bg-zinc-950 border border-zinc-800 px-4 py-2 rounded-xl">
                   <div className="text-[10px] font-mono text-cyan-300 flex items-center gap-2">
                     <span>▲ ACK / Worker Heartbeat</span>
@@ -243,7 +243,7 @@ export default function AffiliateTopologyModal({ open, onClose }: Props) {
               </div>
 
               {/* FLOW ROW 2 */}
-              <div className="flex flex-col lg:flex-row items-center justify-between gap-4 min-w-[820px]">
+              <div className="flex flex-col lg:flex-row items-center justify-between gap-4 min-w-0 lg:min-w-[820px]">
                 <div className="bg-zinc-950 border-2 border-[#09a6d6] p-5 rounded-2xl w-60 text-center space-y-2 shadow-2xl relative">
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-2.5 py-0.5 bg-[#09a6d6] text-white font-mono text-[9px] font-bold rounded-full uppercase">
                     CORE MACHINE LEARNING

@@ -642,6 +642,9 @@
       0% { background-position-x: 0; }
       100% { background-position-x: 360px; }
     }
+    @media (max-width: 640px) {
+      .about-wave { display: none; }
+    }
     @media (prefers-reduced-motion: reduce) {
       .about-wave::before,
       .about-wave::after { animation: none; }
@@ -693,6 +696,17 @@
     .v-a-sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8a919c; margin-top: 3px; }
     .v-a-desc { font-size: 13px; line-height: 1.65; color: #8a919c; max-width: none; margin-top: 0.5rem; }
     .v-a-stack { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #5b636e; text-align: right; padding-top: 0.25rem; }
+    @media (max-width: 640px) {
+      .v-a-row {
+        grid-template-columns: 2.25rem 1fr;
+        align-items: start;
+      }
+      .v-a-stack {
+        grid-column: 2;
+        text-align: left;
+        padding-top: 0.5rem;
+      }
+    }
 
   
     /* ================= TIMELINE REDESIGN — 10 VARIATIONS ================= */

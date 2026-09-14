@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { testimonials } from "@/data/testimonials";
 
@@ -54,10 +54,16 @@ function Card({
 export default function TestimonialsSection() {
   const { t } = useTranslation();
   const [active, setActive] = useState(0);
+  const gridRef = useRef<HTMLDivElement>(null);
+  const isMobileRef = useRef(false);
+
+  useEffect(() => {
+    isMobileRef.current = window.innerWidth < 768;
+  }, []);
 
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) return;
+    if (reduced || isMobileRef.current) return;
     const id = setInterval(() => {
       setActive((a) => (a + 1) % testimonials.length);
     }, 5000);
@@ -72,7 +78,10 @@ export default function TestimonialsSection() {
     let timer: ReturnType<typeof setTimeout> | null = null;
     const onResize = () => {
       if (timer) clearTimeout(timer);
-      timer = setTimeout(() => setNCols(cardCount()), 150);
+      timer = setTimeout(() => {
+        isMobileRef.current = window.innerWidth < 768;
+        setNCols(cardCount());
+      }, 150);
     };
     window.addEventListener("resize", onResize);
     return () => {
@@ -81,7 +90,39 @@ export default function TestimonialsSection() {
     };
   }, []);
 
-  const columns = useMemo(() => {
+  // Scroll-spy: no mobile, destaca o card mais visível conforme o usuário desliza.
+  useEffect(() => {
+    if (isMobileRef.current === false) return;
+    const grid = gridRef.current;
+    if (!grid) return;
+
+    const cards = () =>
+      Array.from(grid.querySelectorAll<HTMLElement>(".t-card-real"));
+
+    const onScroll = () => {
+      const list = cards();
+      if (!list.length) return;
+      const viewportMid = window.innerHeight / 2;
+      let best = 0;
+      let bestDist = Infinity;
+      list.forEach((el, i) => {
+        const r = el.getBoundingClientRect();
+        const mid = r.top + r.height / 2;
+        const dist = Math.abs(mid - viewportMid);
+        if (r.top < window.innerHeight && r.bottom > 0 && dist < bestDist) {
+          bestDist = dist;
+          best = i;
+        }
+      });
+      setActive(best);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [nCols]);
+
+  const flatCards = useMemo(() => {
     const n = nCols;
     const cols: (typeof testimonials)[number][][] = Array.from(
       { length: n },
@@ -96,11 +137,14 @@ export default function TestimonialsSection() {
       cols[idx].push(d);
       heights[idx] += d.q.length / 55 + 60;
     });
-    return cols;
+    // Ordem visual (coluna a coluna) com índice global estável
+    let g = 0;
+    return cols.map((col, ci) => ({
+      ci,
+      col,
+      indices: col.map(() => g++),
+    }));
   }, [nCols]);
-
-  // keep a stable flat index mapping
-  let flatIdx = 0;
 
   return (
     <section id="who-worked-with-me" className="relative pt-10 pb-4">
@@ -135,11 +179,11 @@ export default function TestimonialsSection() {
             </div>
           </div>
 
-          <div id="mosaic-grid">
-            {columns.map((col, ci) => (
+          <div id="mosaic-grid" ref={gridRef}>
+            {flatCards.map(({ ci, col, indices }) => (
               <div className="m-col" key={ci}>
-                {col.map((d) => {
-                  const idx = flatIdx++;
+                {col.map((d, pos) => {
+                  const idx = indices[pos];
                   return <Card key={d.name} t={d} idx={idx} active={idx === active} />;
                 })}
               </div>

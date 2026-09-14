@@ -1,5 +1,4 @@
 import { projectGroups } from "@/data/projects";
-import FlickerBand from "@/components/FlickerBand";
 
 interface Props {
   onOpenTopology?: () => void;
@@ -8,22 +7,7 @@ interface Props {
 export default function ProductionArtifacts({ onOpenTopology }: Props) {
   return (
     <section id="production-artifacts" className="pt-0">
-      {/* FULL-BLEED FLICKER DIVIDER */}
-      <div
-        className="relative h-[150px] overflow-hidden border-y border-zinc-800/40 pointer-events-none select-none"
-        style={{
-          marginLeft: "calc(50% - 50vw)",
-          marginRight: "calc(50% - 50vw)",
-          maskImage:
-            "linear-gradient(to bottom, transparent 0%, black 28%, black 72%, transparent 100%)",
-          WebkitMaskImage:
-            "linear-gradient(to bottom, transparent 0%, black 28%, black 72%, transparent 100%)",
-        }}
-      >
-        <FlickerBand />
-      </div>
-
-      <h2 className="text-2xl sm:text-3xl font-bold font-display text-white tracking-tight mt-24">
+      <h2 className="text-2xl sm:text-3xl font-bold font-display text-white tracking-tight">
         Shipped Systems &amp; Technical Blueprints
       </h2>
       <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed mt-3">

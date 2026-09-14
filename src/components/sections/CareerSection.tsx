@@ -13,7 +13,7 @@ export default function CareerSection() {
       </div>
 
       {/* Section Title & Meta */}
-      <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-zinc-800/80 pb-3">
+      <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3">
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold font-display text-white">
             {t("phase2_title")}
