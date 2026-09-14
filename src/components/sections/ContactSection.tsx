@@ -2,25 +2,43 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useContactClock } from "@/hooks/useLiveClock";
 
+function prettyTimezone(zone: string): string {
+  try {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: zone,
+      timeZoneName: "long",
+    })
+      .formatToParts(new Date())
+      .find((p) => p.type === "timeZoneName");
+    if (parts && parts.value) return parts.value;
+  } catch {
+    /* fallback below */
+  }
+  const last = zone.split("/").pop() || zone;
+  return last.replace(/_/g, " ");
+}
+
 function visitorInfo() {
   let timezone = "America/Sao_Paulo";
+  let pretty = "São Paulo";
   let diff = 0; // horas em relação ao BRT (UTC-3)
   try {
     timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "America/Sao_Paulo";
+    pretty = prettyTimezone(timezone);
     const visitorOffsetMin = -new Date().getTimezoneOffset(); // offset UTC em minutos
     const brtOffsetMin = -180; // BRT = UTC-3
     diff = Math.round((visitorOffsetMin - brtOffsetMin) / 60);
   } catch {
     /* keep defaults */
   }
-  return { timezone, diff };
+  return { timezone, pretty, diff };
 }
 
 export default function ContactSection() {
   const { t } = useTranslation();
   const clock = useContactClock();
   const [copied, setCopied] = useState(false);
-  const { timezone, diff } = visitorInfo();
+  const { timezone, pretty, diff } = visitorInfo();
 
   const copyEmail = () => {
     const email = "josegmelo.dev@gmail.com";
@@ -61,7 +79,7 @@ export default function ContactSection() {
               <span>{clock}</span>
             </div>
             <div className="text-zinc-400 text-[11px] pt-1 leading-relaxed">
-              Seu fuso: <span className="text-cyan-300">{timezone}</span>
+              Seu fuso: <span className="text-cyan-300">{pretty}</span>
               {diff !== 0 && (
                 <span className="block">
                   {diff > 0
