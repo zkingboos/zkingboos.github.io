@@ -173,8 +173,8 @@
   /* Layout adjustments */
   main, section {
     padding: 0 !important;
-    margin-bottom: 2rem !important;
-    page-break-inside: avoid;
+    margin-bottom: 0.75rem !important;
+    page-break-inside: auto;
   }
 
   .min-h-screen {
@@ -226,8 +226,8 @@
   }
 
   /* Avoid cutting elements across pages */
-  h1, h2, h3 { page-break-after: avoid; }
-  ul, p { page-break-before: avoid; }
+  h1, h2, h3 { page-break-after: auto; }
+  ul, p { page-break-before: auto; }
   
   @page {
     margin: 1.5cm;

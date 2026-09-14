@@ -9,6 +9,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/josegabrielma/",
   linkedinHandle: "josegabrielma",
   profilePhoto: "https://avatars.githubusercontent.com/u/42500187?v=4",
+  website: "joseg.xyz",
 };
 
 export const languages: LocalizedText[] = [

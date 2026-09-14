@@ -36,10 +36,12 @@ function visitorInfo() {
 }
 
 export default function ContactSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const clock = useContactClock();
   const [copied, setCopied] = useState(false);
   const { timezone, pretty, diff } = visitorInfo();
+
+  const cvLang = i18n.language?.startsWith("pt") ? "pt" : "en";
 
   const copyEmail = () => {
     const email = "josegmelo.dev@gmail.com";
@@ -117,7 +119,7 @@ export default function ContactSection() {
             </span>
             <div className="text-white font-bold text-sm">{t("contact_cv_value")}</div>
             <a
-              href="/cv"
+              href={`/cv?lang=${cvLang}`}
               className="text-emerald-400 hover:underline text-[11px] flex items-center gap-1 pt-1"
             >
               <span>{t("contact_cv_link")}</span>

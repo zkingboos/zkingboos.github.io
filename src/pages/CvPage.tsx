@@ -31,7 +31,7 @@ const CvContent = React.forwardRef<HTMLDivElement>((_props, ref) => {
           <h1 className="text-xl font-bold">{personalInfo.name}</h1>
           <div className="text-sm text-zinc-600">{t("hero_role_title")}</div>
           <div className="text-xs text-zinc-500 mt-1">
-            {personalInfo.email} · {personalInfo.githubHandle} · {personalInfo.linkedinHandle}
+            {personalInfo.website} · {personalInfo.email} · {personalInfo.githubHandle} · {personalInfo.linkedinHandle}
           </div>
         </div>
       </div>
