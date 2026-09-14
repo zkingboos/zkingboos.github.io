@@ -6,7 +6,6 @@ import ProductionArtifacts from "@/components/sections/ProductionArtifacts";
 import LowLevelRoots from "@/components/sections/LowLevelRoots";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
-import LegacyCatalog from "@/components/sections/LegacyCatalog";
 import AffiliateTopologyModal from "@/components/topology/AffiliateTopologyModal";
 
 const Index = () => {
@@ -24,7 +23,6 @@ const Index = () => {
           <TestimonialsSection />
           <ContactSection />
         </div>
-        <LegacyCatalog />
       </main>
 
       <AffiliateTopologyModal
