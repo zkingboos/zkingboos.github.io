@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useContactClock } from "@/hooks/useLiveClock";
+import ContactForm from "./ContactForm";
 
 function prettyTimezone(zone: string): string {
   try {
@@ -60,12 +61,6 @@ export default function ContactSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white font-display tracking-tight">
             {t("phase5_title")}
           </h2>
-          <p className="text-sm sm:text-base text-zinc-400 leading-relaxed max-w-2xl">
-            Disponível para contratos de engenharia de software de alta escala,
-            posições de Senior/Staff Backend &amp; Infraestrutura, ecossistemas
-            orientados a eventos (Kafka/Go/Java) e consultoria técnica em
-            clusters bare-metal (Proxmox + Ceph).
-          </p>
         </div>
 
         {/* 4 Informational Cards Grid */}
@@ -136,6 +131,8 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
+
+      <ContactForm />
 
       <Footer />
     </section>
