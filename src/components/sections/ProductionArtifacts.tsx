@@ -1,10 +1,14 @@
 import { projectGroups } from "@/data/projects";
+import { useLang } from "@/lib/lang";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   onOpenTopology?: () => void;
 }
 
 export default function ProductionArtifacts({ onOpenTopology }: Props) {
+  const { i18n } = useTranslation();
+  const lang = useLang(i18n.language);
   return (
     <section id="production-artifacts" className="pt-0">
       <h2 className="text-2xl sm:text-3xl font-bold font-display text-white tracking-tight">
@@ -26,7 +30,7 @@ export default function ProductionArtifacts({ onOpenTopology }: Props) {
                 <div>
                   <div className="v-a-name">{p.name}</div>
                   <div className="v-a-sub">{p.sub}</div>
-                  <p className="v-a-desc">{p.desc}</p>
+                  <p className="v-a-desc">{p.desc[lang]}</p>
                   {p.hasTopology && (
                     <button
                       onClick={onOpenTopology}
