@@ -65,7 +65,7 @@
   "t1_quote": "\"O José liderou a migração crítica da nossa infraestrutura saindo da AWS para bare-metal com Proxmox e Ceph com precisão absoluta. Além do profundo domínio técnico em redes e Linux, tem um senso de propriedade que traz tranquilidade para qualquer liderança técnica.\"",
   "t2_quote": "\"Construir o BarberGrid ao lado do José mostrou o quanto ele pensa em escalabilidade desde a primeira linha de código. A modelagem OpenAPI e a arquitetura de backend em Go garantiram que nosso MVP nascesse pronto para escala corporativa sem retrabalho.\"",
   "t3_quote": "\"Raramente vejo um engenheiro com tanto apego ao funcionamento de baixo nível. Seja depurando concorrência de transações no PostgreSQL, tuning de filas BullMQ ou manipulando buffers de rede, o José resolve o que a maioria tem medo de tocar.\"",
-  "feedbacks_cta": "Trabalhou com José Gabriel e deseja deixar um depoimento?",
+  "feedbacks_cta": "Trabalhou comigo e quer deixar um depoimento?",
   "feedbacks_link": "Recomendar no LinkedIn ↗",
   "phase5_badge": "FASE 05 // RETORNO AO PRESENTE & PRÓXIMOS DESAFIOS",
   "phase5_status": "Pronto para Conectar",
