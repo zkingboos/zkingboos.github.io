@@ -100,5 +100,20 @@
   "contact_intro": "Tem uma ideia, um projeto ou uma vaga que combina comigo? Me conta um pouco que eu respondo em até 24 horas.",
   "timezone_you": "Seu fuso",
   "timezone_ahead": "{{n}}h à frente do meu horário (BRT)",
-  "timezone_behind": "{{n}}h atrás do meu horário (BRT)"
+  "timezone_behind": "{{n}}h atrás do meu horário (BRT)",
+  "form_name": "Nome",
+  "form_name_ph": "Como posso te chamar?",
+  "form_email": "Email",
+  "form_email_ph": "voce@exemplo.com",
+  "form_subject": "Assunto",
+  "form_subj_proposal": "Proposta de projeto",
+  "form_subj_hire": "Quero contratar",
+  "form_subj_consulting": "Consultoria em infraestrutura",
+  "form_subj_other": "Outro",
+  "form_message": "Mensagem",
+  "form_message_ph": "Conte um pouco sobre o que você precisa...",
+  "form_send": "Enviar mensagem ↗",
+  "form_sending": "Enviando...",
+  "form_success": "Mensagem enviada com sucesso!",
+  "form_error": "Erro ao enviar. Tente novamente ou me chame por email."
 }
