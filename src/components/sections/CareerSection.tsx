@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { career } from "@/data/career";
+import { useLang } from "@/lib/lang";
 
 export default function CareerSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = useLang(i18n.language);
 
   return (
     <section className="space-y-6 relative" id="section-career">
@@ -38,13 +40,13 @@ export default function CareerSection() {
                         <span className="m-role">{r.role}</span>
                         <span className="m-year">{r.period}</span>
                       </div>
-                      <div className="m-desc">{r.desc}</div>
+                      <div className="m-desc">{r.desc[lang]}</div>
                       <div className="m-stack">{r.stack}</div>
                     </div>
                   ))
                 : item.desc && (
                     <>
-                      <div className="m-desc">{item.desc}</div>
+                      <div className="m-desc">{item.desc[lang]}</div>
                       {item.stack && <div className="m-stack">{item.stack}</div>}
                     </>
                   )}
