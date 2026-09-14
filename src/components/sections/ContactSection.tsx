@@ -62,8 +62,7 @@ export default function ContactSection() {
             {t("phase5_title")}
           </h2>
           <p className="text-sm text-zinc-400 leading-relaxed">
-            Tem uma ideia, um projeto ou uma vaga que combina comigo? Me conta um
-            pouco que eu respondo em até 24 horas.
+            {t("contact_intro")}
           </p>
         </div>
 
@@ -73,20 +72,20 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 pt-6 border-t border-zinc-800/60 text-xs font-mono">
           <div className="p-4 rounded-xl bg-black/40 border border-zinc-800/80 space-y-1.5">
             <span className="text-zinc-500 text-[11px] uppercase tracking-wider block">
-              Localização &amp; Fuso
+              {t("contact_location_card")}
             </span>
-            <div className="text-white font-bold text-sm">Brasil · Remoto Global</div>
+            <div className="text-white font-bold text-sm">{t("contact_remote")}</div>
             <div className="text-emerald-400 text-[11px] flex items-center gap-1.5 pt-1">
               <span>{clock}</span>
             </div>
             <div className="text-zinc-400 text-[11px] pt-1 leading-relaxed">
               {diff !== 0 && (
                 <span className="block">
-                  Seu fuso: <span className="text-cyan-300">{pretty}</span>
+                  {t("timezone_you")}: <span className="text-cyan-300">{pretty}</span>
                   <span className="block">
                     {diff > 0
-                      ? `${diff}h à frente do meu horário (BRT)`
-                      : `${Math.abs(diff)}h atrás do meu horário (BRT)`}
+                      ? t("timezone_ahead", { n: diff })
+                      : t("timezone_behind", { n: Math.abs(diff) })}
                   </span>
                 </span>
               )}
@@ -95,7 +94,7 @@ export default function ContactSection() {
 
           <div className="p-4 rounded-xl bg-black/40 border border-zinc-800/80 space-y-1.5">
             <span className="text-zinc-500 text-[11px] uppercase tracking-wider block">
-              E-mail Direto
+              {t("contact_email_card")}
             </span>
             <a
               href="mailto:josegmelo.dev@gmail.com"
@@ -108,31 +107,31 @@ export default function ContactSection() {
               onClick={copyEmail}
               className="text-blue-400 hover:text-blue-300 text-[11px] flex items-center gap-1 pt-1 transition-colors"
             >
-              <span>{copied ? "Copiado" : "Copiar com 1 clique"}</span>
+              <span>{copied ? t("contact_copied") : t("contact_copy")}</span>
             </button>
           </div>
 
           <div className="p-4 rounded-xl bg-black/40 border border-zinc-800/80 space-y-1.5">
             <span className="text-zinc-500 text-[11px] uppercase tracking-wider block">
-              Currículo / Resume
+              {t("contact_cv_card")}
             </span>
-            <div className="text-white font-bold text-sm">PDF Técnico Oficial</div>
+            <div className="text-white font-bold text-sm">{t("contact_cv_value")}</div>
             <a
               href="https://drive.google.com/file/d/1GnGjLzJu_3zXgp5P3uJL2GAQewCMrRhG/view?usp=sharing"
               target="_blank"
               className="text-emerald-400 hover:underline text-[11px] flex items-center gap-1 pt-1"
             >
-              <span>Baixar CV Atualizado ↗</span>
+              <span>{t("contact_cv_link")}</span>
             </a>
           </div>
 
           <div className="p-4 rounded-xl bg-black/40 border border-zinc-800/80 space-y-1.5">
             <span className="text-zinc-500 text-[11px] uppercase tracking-wider block">
-              Tempo de Resposta
+              {t("contact_time_card")}
             </span>
-            <div className="text-white font-bold text-sm">&lt; 24 Horas</div>
+            <div className="text-white font-bold text-sm">{t("contact_time_value")}</div>
             <div className="text-zinc-400 text-[11px] pt-1">
-              Via E-mail ou LinkedIn Direct
+              {t("contact_time_note")}
             </div>
           </div>
         </div>

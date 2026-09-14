@@ -83,5 +83,22 @@
   "lang_level_b1b2": "B1/B2 (Upper Intermediate)",
   "host_14": "14 anos técnico",
   "host_5": "5 anos profissional",
-  "host_desc": "Da paixão precoce por sistemas aos ambientes bare-metal em produção — raízes low-level que sustentam infraestrutura soberana."
+  "host_desc": "Da paixão precoce por sistemas aos ambientes bare-metal em produção — raízes low-level que sustentam infraestrutura soberana.",
+  "location_country": "Brasil",
+  "available_globally": "Disponível Globalmente",
+  "contact_location_card": "Localização & Fuso",
+  "contact_remote": "Brasil · Remoto Global",
+  "contact_email_card": "E-mail Direto",
+  "contact_cv_card": "Currículo / Resume",
+  "contact_cv_value": "PDF Técnico Oficial",
+  "contact_cv_link": "Baixar CV Atualizado ↗",
+  "contact_copy": "Copiar com 1 clique",
+  "contact_copied": "Copiado",
+  "contact_time_card": "Tempo de Resposta",
+  "contact_time_value": "< 24 Horas",
+  "contact_time_note": "Via E-mail ou LinkedIn Direct",
+  "contact_intro": "Tem uma ideia, um projeto ou uma vaga que combina comigo? Me conta um pouco que eu respondo em até 24 horas.",
+  "timezone_you": "Seu fuso",
+  "timezone_ahead": "{{n}}h à frente do meu horário (BRT)",
+  "timezone_behind": "{{n}}h atrás do meu horário (BRT)"
 }

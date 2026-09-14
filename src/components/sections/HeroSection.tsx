@@ -16,13 +16,13 @@ export default function HeroSection() {
           </span>
         </span>
         <div className="flex items-center gap-3">
-          <span>Brazil</span>
+          <span>{t("location_country")}</span>
           <span className="text-zinc-600 hidden sm:inline">·</span>
           <span className="text-emerald-400 font-bold hidden sm:inline">
             {clock}
           </span>
           <span className="text-zinc-600 hidden sm:inline">·</span>
-          <span className="text-zinc-300 hidden sm:inline">Available Globally</span>
+          <span className="text-zinc-300 hidden sm:inline">{t("available_globally")}</span>
         </div>
       </div>
 

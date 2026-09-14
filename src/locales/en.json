@@ -83,5 +83,22 @@
   "lang_level_b1b2": "B1/B2 (Upper Intermediate)",
   "host_14": "14 years technical",
   "host_5": "5 years professional",
-  "host_desc": "From early passion for systems to production bare-metal environments — low-level roots that sustain sovereign infrastructure."
+  "host_desc": "From early passion for systems to production bare-metal environments — low-level roots that sustain sovereign infrastructure.",
+  "location_country": "Brazil",
+  "available_globally": "Available Globally",
+  "contact_location_card": "Location & Timezone",
+  "contact_remote": "Brazil · Global Remote",
+  "contact_email_card": "Direct Email",
+  "contact_cv_card": "Curriculum / Resume",
+  "contact_cv_value": "Official Technical PDF",
+  "contact_cv_link": "Download Updated CV ↗",
+  "contact_copy": "Copy with 1 click",
+  "contact_copied": "Copied",
+  "contact_time_card": "Response Time",
+  "contact_time_value": "< 24 Hours",
+  "contact_time_note": "Via Email or LinkedIn Direct",
+  "contact_intro": "Have an idea, a project, or a role that fits me? Tell me a bit and I'll reply within 24 hours.",
+  "timezone_you": "Your timezone",
+  "timezone_ahead": "{{n}}h ahead of my time (BRT)",
+  "timezone_behind": "{{n}}h behind my time (BRT)"
 }
