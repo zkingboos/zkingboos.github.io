@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useContactClock } from "@/hooks/useLiveClock";
 import ContactForm from "./ContactForm";
+import { personalInfo } from "@/data/personal";
 
 function prettyTimezone(zone: string): string {
   try {
@@ -44,7 +45,7 @@ export default function ContactSection() {
   const cvLang = i18n.language?.startsWith("pt") ? "pt" : "en";
 
   const copyEmail = () => {
-    const email = "josegmelo.dev@gmail.com";
+    const email = personalInfo.email;
     if (navigator.clipboard) {
       navigator.clipboard.writeText(email).then(() => {
         setCopied(true);
@@ -99,10 +100,10 @@ export default function ContactSection() {
               {t("contact_email_card")}
             </span>
             <a
-              href="mailto:josegmelo.dev@gmail.com"
+              href={`mailto:${personalInfo.email}`}
               className="text-white hover:text-blue-400 font-bold text-sm block truncate transition-colors"
             >
-              josegmelo.dev@gmail.com
+              {personalInfo.email}
             </a>
             <button
               type="button"
@@ -149,13 +150,13 @@ function Footer() {
     <footer className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
       <div>{t("footer_text")}</div>
       <div className="flex items-center gap-5">
-        <a href="https://github.com/zkingboos" target="_blank" className="hover:text-white transition-colors">
+        <a href={personalInfo.github} target="_blank" className="hover:text-white transition-colors">
           GitHub @zkingboos
         </a>
-        <a href="https://www.linkedin.com/in/josegabrielma/" target="_blank" className="hover:text-white transition-colors">
+        <a href={personalInfo.linkedin} target="_blank" className="hover:text-white transition-colors">
           LinkedIn
         </a>
-        <a href="mailto:josegmelo.dev@gmail.com" className="hover:text-white transition-colors">
+        <a href={`mailto:${personalInfo.email}`} className="hover:text-white transition-colors">
           Email
         </a>
         <button

@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import GitHubHeatmap from "@/components/GitHubHeatmap";
 import { openSourceRepos, stackBars } from "@/data/openSource";
+import { personalInfo } from "@/data/personal";
 import { useLang } from "@/lib/lang";
 
 export default function LowLevelRoots() {
@@ -151,7 +152,7 @@ export default function LowLevelRoots() {
             </div>
           </div>
           <a
-            href="https://github.com/zkingboos"
+            href={personalInfo.github}
             target="_blank"
             rel="noopener"
             className="fbento-footer"

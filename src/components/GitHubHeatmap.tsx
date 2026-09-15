@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { personalInfo } from "@/data/personal";
 
 const colorScale = ["#161b22", "#083344", "#0e7490", "#06b6d4", "#22d3ee"];
 
@@ -31,7 +32,7 @@ export default function GitHubHeatmap() {
     setPeriodLabel(y === "last" ? "in the last year" : `in ${y}`);
     try {
       const res = await fetch(
-        `https://github-contributions-api.jogruber.de/v4/zkingboos?y=${y}`
+        `https://github-contributions-api.jogruber.de/v4/${personalInfo.githubHandle}?y=${y}`
       );
       if (!res.ok) throw new Error("Network response not ok");
       const data: GitHubData = await res.json();
@@ -115,7 +116,7 @@ export default function GitHubHeatmap() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/5 pb-3">
         <div>
           <a
-            href="https://github.com/zkingboos"
+            href={personalInfo.github}
             target="_blank"
             className="flex items-center gap-2 text-white hover:text-[#09a6d6] font-bold font-mono text-sm transition-colors"
           >
@@ -130,7 +131,7 @@ export default function GitHubHeatmap() {
           </a>
           <div className="text-[11px] font-mono text-zinc-400 pt-0.5">
             <span>{periodLabel}</span> ·{" "}
-            <a href="https://github.com/zkingboos" target="_blank" className="hover:underline text-[#09a6d6]">
+            <a href={personalInfo.github} target="_blank" className="hover:underline text-[#09a6d6]">
               @zkingboos
             </a>
           </div>

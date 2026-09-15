@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { testimonials } from "@/data/testimonials";
+import { personalInfo } from "@/data/personal";
 import { useLang } from "@/lib/lang";
 
 function cardCount(): number {
@@ -201,7 +202,7 @@ export default function TestimonialsSection() {
       <div className="relative flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
         <p className="text-zinc-400 text-sm text-center">{t("feedbacks_cta")}</p>
         <a
-          href="https://www.linkedin.com/in/zkingboos"
+          href={personalInfo.linkedin}
           target="_blank"
           rel="noopener"
           className="inline-flex items-center gap-1.5 text-[12px] font-mono text-[#09a6d6] hover:text-white bg-[#09a6d6]/10 hover:bg-[#09a6d6]/25 border border-[#09a6d6]/30 rounded-md px-3 py-1.5 transition-colors"
