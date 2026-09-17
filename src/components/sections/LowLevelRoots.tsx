@@ -193,8 +193,10 @@ export default function LowLevelRoots() {
         {/* Card 3: Origins Manifest (image only) */}
         <div className="fbento-card lg:col-span-8 relative">
           <img
-            src="background_fill2.jpg"
+            src="background_fill2.webp"
             alt="Origins"
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div

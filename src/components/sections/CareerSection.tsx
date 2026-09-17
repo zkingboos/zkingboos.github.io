@@ -10,8 +10,8 @@ export default function CareerSection() {
     <section className="space-y-6 relative" id="section-career">
       {/* Blob images de fundo */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <img className="tl-blob tl-blob-tr" src="timeline1.jpg" alt="" />
-        <img className="tl-blob tl-blob-bl" src="timeline2.jpg" alt="" />
+        <img className="tl-blob tl-blob-tr" src="timeline1.webp" alt="" loading="lazy" decoding="async" />
+        <img className="tl-blob tl-blob-bl" src="timeline2.webp" alt="" loading="lazy" decoding="async" />
       </div>
 
       {/* Section Title & Meta */}
